@@ -24,7 +24,7 @@ Mounting data lake container to databricks
 
 Data Lakehouse Architecture
 
-- [Data Lakehouse Architecture]
+- [Data Lakehouse Architecture](./docs/doc/wiki/data-lakehouse-architecture.md)
 - [3 Layer Model](./docs/doc/wiki/lakehouse-3-layers-model.md)
 - [Lakehouse architecture](./docs/doc/wiki/solution-architecture.md)
 
