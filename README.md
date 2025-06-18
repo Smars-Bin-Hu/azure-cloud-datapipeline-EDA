@@ -27,6 +27,7 @@ Data Lakehouse Architecture
 - [Data Lakehouse Architecture](./docs/doc/wiki/data-lakehouse-architecture.md)
 - [3 Layer Model](./docs/doc/wiki/lakehouse-3-layers-model.md)
 - [Lakehouse architecture](./docs/doc/wiki/solution-architecture.md)
+- [Delta Lake Transaction Log](./docs/doc/wiki/delta-lake-transcation-log.md)
 
 ## License
 
