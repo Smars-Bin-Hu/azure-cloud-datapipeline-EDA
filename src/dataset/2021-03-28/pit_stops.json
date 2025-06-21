@@ -1,0 +1,362 @@
+[
+  {
+    "raceId": 1052,
+    "driverId": 815,
+    "stop": 1,
+    "lap": 2,
+    "time": "18:11:56",
+    "duration": 23.993,
+    "milliseconds": 23993
+  },
+  {
+    "raceId": 1052,
+    "driverId": 842,
+    "stop": 1,
+    "lap": 4,
+    "time": "18:16:14",
+    "duration": 38.338,
+    "milliseconds": 38338
+  },
+  {
+    "raceId": 1052,
+    "driverId": 4,
+    "stop": 1,
+    "lap": 11,
+    "time": "18:27:32",
+    "duration": 24.373,
+    "milliseconds": 24373
+  },
+  {
+    "raceId": 1052,
+    "driverId": 846,
+    "stop": 1,
+    "lap": 12,
+    "time": "18:29:05",
+    "duration": 24.899,
+    "milliseconds": 24899
+  },
+  {
+    "raceId": 1052,
+    "driverId": 844,
+    "stop": 1,
+    "lap": 12,
+    "time": "18:29:06",
+    "duration": 24.925,
+    "milliseconds": 24925
+  },
+  {
+    "raceId": 1052,
+    "driverId": 840,
+    "stop": 1,
+    "lap": 12,
+    "time": "18:29:09",
+    "duration": 24.884,
+    "milliseconds": 24884
+  },
+  {
+    "raceId": 1052,
+    "driverId": 841,
+    "stop": 1,
+    "lap": 12,
+    "time": "18:29:14",
+    "duration": 31.998,
+    "milliseconds": 31998
+  },
+  {
+    "raceId": 1052,
+    "driverId": 1,
+    "stop": 1,
+    "lap": 13,
+    "time": "18:30:29",
+    "duration": 24.839,
+    "milliseconds": 24839
+  },
+  {
+    "raceId": 1052,
+    "driverId": 817,
+    "stop": 1,
+    "lap": 13,
+    "time": "18:30:45",
+    "duration": 24.688,
+    "milliseconds": 24688
+  },
+  {
+    "raceId": 1052,
+    "driverId": 8,
+    "stop": 1,
+    "lap": 13,
+    "time": "18:30:52",
+    "duration": 24.107,
+    "milliseconds": 24107
+  },
+  {
+    "raceId": 1052,
+    "driverId": 839,
+    "stop": 1,
+    "lap": 13,
+    "time": "18:30:55",
+    "duration": 25.226,
+    "milliseconds": 25226
+  },
+  {
+    "raceId": 1052,
+    "driverId": 847,
+    "stop": 1,
+    "lap": 13,
+    "time": "18:31:02",
+    "duration": 24.621,
+    "milliseconds": 24621
+  },
+  {
+    "raceId": 1052,
+    "driverId": 849,
+    "stop": 1,
+    "lap": 14,
+    "time": "18:32:44",
+    "duration": 26.046,
+    "milliseconds": 26046
+  },
+  {
+    "raceId": 1052,
+    "driverId": 854,
+    "stop": 1,
+    "lap": 14,
+    "time": "18:32:58",
+    "duration": 25.798,
+    "milliseconds": 25798
+  },
+  {
+    "raceId": 1052,
+    "driverId": 832,
+    "stop": 1,
+    "lap": 15,
+    "time": "18:34:04",
+    "duration": 24.353,
+    "milliseconds": 24353
+  },
+  {
+    "raceId": 1052,
+    "driverId": 852,
+    "stop": 1,
+    "lap": 15,
+    "time": "18:34:12",
+    "duration": 25.046,
+    "milliseconds": 25046
+  },
+  {
+    "raceId": 1052,
+    "driverId": 822,
+    "stop": 1,
+    "lap": 16,
+    "time": "18:35:24",
+    "duration": 24.262,
+    "milliseconds": 24262
+  },
+  {
+    "raceId": 1052,
+    "driverId": 830,
+    "stop": 1,
+    "lap": 17,
+    "time": "18:36:54",
+    "duration": 24.767,
+    "milliseconds": 24767
+  },
+  {
+    "raceId": 1052,
+    "driverId": 815,
+    "stop": 2,
+    "lap": 19,
+    "time": "18:40:35",
+    "duration": 24.105,
+    "milliseconds": 24105
+  },
+  {
+    "raceId": 1052,
+    "driverId": 842,
+    "stop": 2,
+    "lap": 19,
+    "time": "18:41:17",
+    "duration": 24.317,
+    "milliseconds": 24317
+  },
+  {
+    "raceId": 1052,
+    "driverId": 20,
+    "stop": 1,
+    "lap": 24,
+    "time": "18:49:08",
+    "duration": 24.626,
+    "milliseconds": 24626
+  },
+  {
+    "raceId": 1052,
+    "driverId": 1,
+    "stop": 2,
+    "lap": 28,
+    "time": "18:54:40",
+    "duration": 24.076,
+    "milliseconds": 24076
+  },
+  {
+    "raceId": 1052,
+    "driverId": 840,
+    "stop": 2,
+    "lap": 28,
+    "time": "18:55:23",
+    "duration": 25.525,
+    "milliseconds": 25525
+  },
+  {
+    "raceId": 1052,
+    "driverId": 8,
+    "stop": 2,
+    "lap": 29,
+    "time": "18:57:06",
+    "duration": 24.046,
+    "milliseconds": 24046
+  },
+  {
+    "raceId": 1052,
+    "driverId": 4,
+    "stop": 2,
+    "lap": 29,
+    "time": "18:57:13",
+    "duration": 24.775,
+    "milliseconds": 24775
+  },
+  {
+    "raceId": 1052,
+    "driverId": 822,
+    "stop": 2,
+    "lap": 30,
+    "time": "18:57:58",
+    "duration": 32.897,
+    "milliseconds": 32897
+  },
+  {
+    "raceId": 1052,
+    "driverId": 841,
+    "stop": 2,
+    "lap": 30,
+    "time": "18:58:53",
+    "duration": 24.223,
+    "milliseconds": 24223
+  },
+  {
+    "raceId": 1052,
+    "driverId": 839,
+    "stop": 2,
+    "lap": 31,
+    "time": "19:00:29",
+    "duration": 24.471,
+    "milliseconds": 24471
+  },
+  {
+    "raceId": 1052,
+    "driverId": 844,
+    "stop": 2,
+    "lap": 32,
+    "time": "19:01:40",
+    "duration": 24.176,
+    "milliseconds": 24176
+  },
+  {
+    "raceId": 1052,
+    "driverId": 817,
+    "stop": 2,
+    "lap": 32,
+    "time": "19:01:44",
+    "duration": 24.655,
+    "milliseconds": 24655
+  },
+  {
+    "raceId": 1052,
+    "driverId": 849,
+    "stop": 2,
+    "lap": 32,
+    "time": "19:02:32",
+    "duration": 23.983,
+    "milliseconds": 23983
+  },
+  {
+    "raceId": 1052,
+    "driverId": 846,
+    "stop": 2,
+    "lap": 33,
+    "time": "19:03:11",
+    "duration": 25.64,
+    "milliseconds": 25640
+  },
+  {
+    "raceId": 1052,
+    "driverId": 852,
+    "stop": 2,
+    "lap": 33,
+    "time": "19:03:36",
+    "duration": 24.328,
+    "milliseconds": 24328
+  },
+  {
+    "raceId": 1052,
+    "driverId": 854,
+    "stop": 2,
+    "lap": 33,
+    "time": "19:04:27",
+    "duration": 25.343,
+    "milliseconds": 25343
+  },
+  {
+    "raceId": 1052,
+    "driverId": 847,
+    "stop": 2,
+    "lap": 36,
+    "time": "19:08:48",
+    "duration": 24.248,
+    "milliseconds": 24248
+  },
+  {
+    "raceId": 1052,
+    "driverId": 832,
+    "stop": 2,
+    "lap": 37,
+    "time": "19:09:53",
+    "duration": 24.341,
+    "milliseconds": 24341
+  },
+  {
+    "raceId": 1052,
+    "driverId": 815,
+    "stop": 3,
+    "lap": 38,
+    "time": "19:11:20",
+    "duration": 24.191,
+    "milliseconds": 24191
+  },
+  {
+    "raceId": 1052,
+    "driverId": 830,
+    "stop": 2,
+    "lap": 39,
+    "time": "19:12:13",
+    "duration": 23.848,
+    "milliseconds": 23848
+  },
+  {
+    "raceId": 1052,
+    "driverId": 842,
+    "stop": 3,
+    "lap": 39,
+    "time": "19:13:55",
+    "duration": 24.983,
+    "milliseconds": 24983
+  },
+  {
+    "raceId": 1052,
+    "driverId": 822,
+    "stop": 3,
+    "lap": 54,
+    "time": "19:36:21",
+    "duration": 24.566,
+    "milliseconds": 24566
+  }
+]

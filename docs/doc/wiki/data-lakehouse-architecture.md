@@ -19,7 +19,7 @@
 Traditional enterprises use data warehouses like Oracle or SQL Server, ingesting sales and customer data via ETL tools to generate reports for management decisions.
 
 ---
-
+3
 ## 2. Data Lake
 
 ### Core Features

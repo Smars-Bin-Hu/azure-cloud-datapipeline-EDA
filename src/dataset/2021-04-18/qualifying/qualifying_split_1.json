@@ -1,0 +1,222 @@
+[
+  {
+    "qualifyId": 8755,
+    "raceId": 1053,
+    "driverId": 1,
+    "constructorId": 131,
+    "number": 44,
+    "position": 1,
+    "q1": "1:14.823",
+    "q2": "1:14.817",
+    "q3": "1:14.411"
+  },
+  {
+    "qualifyId": 8756,
+    "raceId": 1053,
+    "driverId": 815,
+    "constructorId": 9,
+    "number": 11,
+    "position": 2,
+    "q1": "1:15.395",
+    "q2": "1:14.716",
+    "q3": "1:14.446"
+  },
+  {
+    "qualifyId": 8757,
+    "raceId": 1053,
+    "driverId": 830,
+    "constructorId": 9,
+    "number": 33,
+    "position": 3,
+    "q1": "1:15.109",
+    "q2": "1:14.884",
+    "q3": "1:14.498"
+  },
+  {
+    "qualifyId": 8758,
+    "raceId": 1053,
+    "driverId": 844,
+    "constructorId": 6,
+    "number": 16,
+    "position": 4,
+    "q1": "1:15.413",
+    "q2": "1:14.808",
+    "q3": "1:14.740"
+  },
+  {
+    "qualifyId": 8759,
+    "raceId": 1053,
+    "driverId": 842,
+    "constructorId": 213,
+    "number": 10,
+    "position": 5,
+    "q1": "1:15.548",
+    "q2": "1:14.927",
+    "q3": "1:14.790"
+  },
+  {
+    "qualifyId": 8760,
+    "raceId": 1053,
+    "driverId": 817,
+    "constructorId": 1,
+    "number": 3,
+    "position": 6,
+    "q1": "1:15.669",
+    "q2": "1:15.033",
+    "q3": "1:14.826"
+  },
+  {
+    "qualifyId": 8761,
+    "raceId": 1053,
+    "driverId": 846,
+    "constructorId": 1,
+    "number": 4,
+    "position": 7,
+    "q1": "1:15.009",
+    "q2": "1:14.718",
+    "q3": "1:14.875"
+  },
+  {
+    "qualifyId": 8762,
+    "raceId": 1053,
+    "driverId": 822,
+    "constructorId": 131,
+    "number": 77,
+    "position": 8,
+    "q1": "1:14.672",
+    "q2": "1:14.905",
+    "q3": "1:14.898"
+  },
+  {
+    "qualifyId": 8763,
+    "raceId": 1053,
+    "driverId": 839,
+    "constructorId": 214,
+    "number": 31,
+    "position": 9,
+    "q1": "1:15.385",
+    "q2": "1:15.117",
+    "q3": "1:15.210"
+  },
+  {
+    "qualifyId": 8764,
+    "raceId": 1053,
+    "driverId": 840,
+    "constructorId": 117,
+    "number": 18,
+    "position": 10,
+    "q1": "1:15.522",
+    "q2": "1:15.138",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8765,
+    "raceId": 1053,
+    "driverId": 832,
+    "constructorId": 6,
+    "number": 55,
+    "position": 11,
+    "q1": "1:15.406",
+    "q2": "1:15.199",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8766,
+    "raceId": 1053,
+    "driverId": 847,
+    "constructorId": 3,
+    "number": 63,
+    "position": 12,
+    "q1": "1:15.826",
+    "q2": "1:15.261",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8767,
+    "raceId": 1053,
+    "driverId": 20,
+    "constructorId": 117,
+    "number": 5,
+    "position": 13,
+    "q1": "1:15.459",
+    "q2": "1:15.394",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8768,
+    "raceId": 1053,
+    "driverId": 849,
+    "constructorId": 3,
+    "number": 6,
+    "position": 14,
+    "q1": "1:15.653",
+    "q2": "1:15.593",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8769,
+    "raceId": 1053,
+    "driverId": 4,
+    "constructorId": 214,
+    "number": 14,
+    "position": 15,
+    "q1": "1:15.832",
+    "q2": "1:15.593",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8770,
+    "raceId": 1053,
+    "driverId": 8,
+    "constructorId": 51,
+    "number": 7,
+    "position": 16,
+    "q1": "1:15.974",
+    "q2": "\\N",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8771,
+    "raceId": 1053,
+    "driverId": 841,
+    "constructorId": 51,
+    "number": 99,
+    "position": 17,
+    "q1": "1:16.122",
+    "q2": "\\N",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8772,
+    "raceId": 1053,
+    "driverId": 854,
+    "constructorId": 210,
+    "number": 47,
+    "position": 18,
+    "q1": "1:16.279",
+    "q2": "\\N",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8773,
+    "raceId": 1053,
+    "driverId": 853,
+    "constructorId": 210,
+    "number": 9,
+    "position": 19,
+    "q1": "1:16.797",
+    "q2": "\\N",
+    "q3": "\\N"
+  },
+  {
+    "qualifyId": 8774,
+    "raceId": 1053,
+    "driverId": 852,
+    "constructorId": 213,
+    "number": 22,
+    "position": 20,
+    "q1": "\\N",
+    "q2": "\\N",
+    "q3": "\\N"
+  }
+]
