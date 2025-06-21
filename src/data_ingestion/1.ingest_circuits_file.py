@@ -83,7 +83,8 @@ from pyspark.sql.functions import lit
 
 # COMMAND ----------
 
-circuits_renamed_df = circuits_selected_df.withColumnRenamed("circuitId", "circuit_id") \
+circuits_renamed_df = circuits_selected_df \
+    .withColumnRenamed("circuitId", "circuit_id") \
     .withColumnRenamed("circuitRef", "circuit_ref") \
     .withColumnRenamed("lat", "latitude") \
     .withColumnRenamed("lng", "longitude") \

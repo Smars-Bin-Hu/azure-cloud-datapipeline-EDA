@@ -53,8 +53,8 @@ results_schema = StructType(fields=[StructField("resultId", IntegerType(), False
 # COMMAND ----------
 
 results_df = spark.read \
-.schema(results_schema) \
-.json(f"{raw_folder_path}/{v_file_date}/results.json")
+    .schema(results_schema) \
+    .json(f"{raw_folder_path}/{v_file_date}/results.json")
 
 # COMMAND ----------
 
@@ -67,17 +67,18 @@ from pyspark.sql.functions import lit
 
 # COMMAND ----------
 
-results_with_columns_df = results_df.withColumnRenamed("resultId", "result_id") \
-                                    .withColumnRenamed("raceId", "race_id") \
-                                    .withColumnRenamed("driverId", "driver_id") \
-                                    .withColumnRenamed("constructorId", "constructor_id") \
-                                    .withColumnRenamed("positionText", "position_text") \
-                                    .withColumnRenamed("positionOrder", "position_order") \
-                                    .withColumnRenamed("fastestLap", "fastest_lap") \
-                                    .withColumnRenamed("fastestLapTime", "fastest_lap_time") \
-                                    .withColumnRenamed("fastestLapSpeed", "fastest_lap_speed") \
-                                    .withColumn("data_source", lit(v_data_source)) \
-                                    .withColumn("file_date", lit(v_file_date))
+results_with_columns_df = results_df \
+    .withColumnRenamed("resultId", "result_id") \
+    .withColumnRenamed("raceId", "race_id") \
+    .withColumnRenamed("driverId", "driver_id") \
+    .withColumnRenamed("constructorId", "constructor_id") \
+    .withColumnRenamed("positionText", "position_text") \
+    .withColumnRenamed("positionOrder", "position_order") \
+    .withColumnRenamed("fastestLap", "fastest_lap") \
+    .withColumnRenamed("fastestLapTime", "fastest_lap_time") \
+    .withColumnRenamed("fastestLapSpeed", "fastest_lap_speed") \
+    .withColumn("data_source", lit(v_data_source)) \
+    .withColumn("file_date", lit(v_file_date))
 
 # COMMAND ----------
 

@@ -43,9 +43,9 @@ pit_stops_schema = StructType(fields=[StructField("raceId", IntegerType(), False
 # COMMAND ----------
 
 pit_stops_df = spark.read \
-.schema(pit_stops_schema) \
-.option("multiLine", True) \
-.json(f"{raw_folder_path}/{v_file_date}/pit_stops.json")
+    .schema(pit_stops_schema) \
+    .option("multiLine", True) \
+    .json(f"{raw_folder_path}/{v_file_date}/pit_stops.json")
 
 # COMMAND ----------
 
@@ -64,11 +64,12 @@ from pyspark.sql.functions import lit
 
 # COMMAND ----------
 
-final_df = pit_stops_with_ingestion_date_df.withColumnRenamed("driverId", "driver_id") \
-.withColumnRenamed("raceId", "race_id") \
-.withColumn("ingestion_date", current_timestamp()) \
-.withColumn("data_source", lit(v_data_source)) \
-.withColumn("file_date", lit(v_file_date))
+final_df = pit_stops_with_ingestion_date_df \
+    .withColumnRenamed("driverId", "driver_id") \
+    .withColumnRenamed("raceId", "race_id") \
+    .withColumn("ingestion_date", current_timestamp()) \
+    .withColumn("data_source", lit(v_data_source)) \
+    .withColumn("file_date", lit(v_file_date))
 
 # COMMAND ----------
 

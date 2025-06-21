@@ -45,9 +45,9 @@ qualifying_schema = StructType(fields=[StructField("qualifyId", IntegerType(), F
 # COMMAND ----------
 
 qualifying_df = spark.read \
-.schema(qualifying_schema) \
-.option("multiLine", True) \
-.json(f"{raw_folder_path}/{v_file_date}/qualifying")
+    .schema(qualifying_schema) \
+    .option("multiLine", True) \
+    .json(f"{raw_folder_path}/{v_file_date}/qualifying")
 
 # COMMAND ----------
 

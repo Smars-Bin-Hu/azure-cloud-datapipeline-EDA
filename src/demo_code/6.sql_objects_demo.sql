@@ -64,7 +64,7 @@ SHOW TABLES;
 
 -- COMMAND ----------
 
--- MAGIC %run "../includes/configuration"
+-- MAGIC %run "../config/configuration"
 
 -- COMMAND ----------
 

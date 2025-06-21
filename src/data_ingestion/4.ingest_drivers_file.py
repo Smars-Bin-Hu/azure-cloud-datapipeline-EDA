@@ -51,8 +51,8 @@ drivers_schema = StructType(fields=[StructField("driverId", IntegerType(), False
 # COMMAND ----------
 
 drivers_df = spark.read \
-.schema(drivers_schema) \
-.json(f"{raw_folder_path}/{v_file_date}/drivers.json")
+    .schema(drivers_schema) \
+    .json(f"{raw_folder_path}/{v_file_date}/drivers.json")
 
 # COMMAND ----------
 
@@ -73,11 +73,12 @@ drivers_with_ingestion_date_df = add_ingestion_date(drivers_df)
 
 # COMMAND ----------
 
-drivers_with_columns_df = drivers_with_ingestion_date_df.withColumnRenamed("driverId", "driver_id") \
-                                    .withColumnRenamed("driverRef", "driver_ref") \
-                                    .withColumn("name", concat(col("name.forename"), lit(" "), col("name.surname"))) \
-                                    .withColumn("data_source", lit(v_data_source)) \
-                                    .withColumn("file_date", lit(v_file_date))
+drivers_with_columns_df = drivers_with_ingestion_date_df \
+    .withColumnRenamed("driverId", "driver_id") \
+    .withColumnRenamed("driverRef", "driver_ref") \
+    .withColumn("name", concat(col("name.forename"), lit(" "), col("name.surname"))) \
+    .withColumn("data_source", lit(v_data_source)) \
+    .withColumn("file_date", lit(v_file_date))
 
 # COMMAND ----------
 
