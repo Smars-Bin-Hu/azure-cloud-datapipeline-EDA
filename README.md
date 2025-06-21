@@ -1,3 +1,7 @@
+
+![1](https://github.com/user-attachments/assets/6334082b-698b-43d4-92a6-d07617248896)
+<p align="center"><em>👆 click the picture to see the presentation video! </em></p>
+
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
 ## 📁 Project Directory
