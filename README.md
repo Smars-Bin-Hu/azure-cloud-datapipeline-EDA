@@ -57,11 +57,11 @@ Introduction of this project here.
 │   ├── 📁 config/                         # Configuration files
 │   │   └── 📄 configuration.py            # Main configuration settings
 │   ├── 📁 utils/                          # Utility functions and helpers
-│   ├── 📁 dataset/                        # Sample datasets (for incremental load)
 │   │   ├── 📁 2021-03-21/                 # March 21, 2021 dataset
 │   │   ├── 📁 2021-03-28/                 # March 28, 2021 dataset
 │   │   └── 📁 2021-04-18/                 # April 18, 2021 dataset
 │   └── 📁 demo_code/                      # Demo and learning materials
+├── 📁 dataset/                            # Sample datasets (for incremental load)
 └── 📁 docs/                               # Documentation directory
     ├── 📄 README.md                       # Documentation overview
     └── 📁 doc/
