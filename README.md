@@ -4,7 +4,7 @@
 
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
-## 📁 Project Directory
+## Project Directory
 <p align="center">
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/src/README/quick-start.md">
       <img src="https://img.shields.io/badge/project-🚀quick_start-blue?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
@@ -18,16 +18,15 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.12.9-blue?style=plastic&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
-  <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=plastic&logo=apachespark&logoSize=auto&color=white"/>
-  <img src="https://img.shields.io/badge/apache_hadoop-3.2.4-blue?style=plastic&logo=apachehadoop&logoColor=yellow&logoSize=auto&color=blue"/>
-  <img src="https://img.shields.io/badge/apache_hive-3.1.3-blue?style=plastic&logo=apachehive&logoColor=yellow&logoSize=auto&color=yellow"/>
-  <br>
-  <img src="https://img.shields.io/badge/apache_zookeeper-3.8.4-79bb2e?style=plastic&color=79bb2e"/>
-  <img src="https://img.shields.io/badge/mysql-8.0.39-blue?style=plastic&logo=mysql&logoColor=blue&logoSize=auto&color=blue"/>
-  <img src="https://img.shields.io/badge/clickhouse-24.12-FFCC01?style=plastic&logo=clickhouse&logoColor=yellow&logoSize=auto&color=FFCC01"/>
-  <img src="https://img.shields.io/badge/Prometheus-2.52.0-f2f2e8?style=plastic&logo=prometheus&logoColor=red&logoSize=auto&color=white"/>
-  <img src="https://img.shields.io/badge/Grafana-10.3.1-f2f2e8?style=plastic&logo=Grafana&logoColor=red&logoSize=auto&color=white"/>
+   <img src="https://img.shields.io/badge/Azure_cloud-66CCFF?style=for-the-badge"/>
+   <img src="https://img.shields.io/badge/azure_data_factory-017CEE?style=for-the-badge&logoColor=white"/>
+   <img src="https://img.shields.io/badge/ADLS_gen2-017CEE?style=for-the-badge&logoColor=white"/>
+   <img src="https://img.shields.io/badge/unity_catelog-f2f2e8?style=for-the-badge&color=f2f2e8"/>
+   <img src="https://img.shields.io/badge/databricks-252523?style=for-the-badge&logo=databricks&color=252523"/>
+   <img src="https://img.shields.io/badge/delta_lake-red?style=for-the-badge&color=red"/>
+   <img src="https://img.shields.io/badge/power_bi-FFCC01?style=for-the-badge&logoColor=white"/>
+   <img src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
+   <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white"/>
 </p>
 
 Introduction of this project here.
@@ -35,6 +34,8 @@ Introduction of this project here.
 | ✅ Core Feature | 🔥 Core Highlights | 📦 Deliverables |
 |-----------|------------------|---------------|
 | **1. [deliverables I](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
+| **2. [deliverables II](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
+| **3. [deliverables III](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
 
 ## Project Structure
 
@@ -78,23 +79,21 @@ Introduction of this project here.
 
 This project sets up a high-availability big data platform, including the following components:
 
-![Apache Spark](https://img.shields.io/badge/Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black) 	![Apache Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black) ![Apache ZooKeeper](https://img.shields.io/badge/Zookeeper-8e8c3a?style=for-the-badge&color=8e8c3a) ![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white) ![Apache Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)  ![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-f2f2e8?style=for-the-badge&logo=prometheus&color=f2f2e8) ![Grafana](https://img.shields.io/badge/Grafana-252523?style=for-the-badge&logo=grafana&color=252523)  ![MySQL](https://img.shields.io/badge/MySQL-blue?style=for-the-badge&logo=mysql&logoColor=yellow&color=blue) ![Oracle Database](https://img.shields.io/badge/Oracle_Database-red?style=for-the-badge&color=red) ![Microsoft PowerBI](https://img.shields.io/badge/Microsoft_PowerBI-pink?style=for-the-badge&color=pink) 
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) 
+![Azure Cloud](https://img.shields.io/badge/Azure_cloud-66CCFF?style=for-the-badge) ![Azure Data Factory](https://img.shields.io/badge/azure_data_factory-017CEE?style=for-the-badge&logoColor=white) ![Azure Data Factory](https://img.shields.io/badge/ADLS_gen2-017CEE?style=for-the-badge&logoColor=white)  ![Unity Catelog](https://img.shields.io/badge/unity_catelog-f2f2e8?style=for-the-badge&color=f2f2e8) ![Databricks](https://img.shields.io/badge/databricks-252523?style=for-the-badge&logo=databricks&color=252523)  ![Delta Lake](https://img.shields.io/badge/delta_lake-red?style=for-the-badge&color=red)  ![Power BI](https://img.shields.io/badge/power_bi-FFCC01?style=for-the-badge&logoColor=white) ![Python](https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue) ![Spark](https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white)
 
-| Components             | Features                       | Version |
+| Components/Services             | Features                       | Version |
 |------------------------|--------------------------------|---------|
-| Apache Hadoop          | Big Data Distributed Framework | 3.2.4   |
-| Apache Zookeeper       | High Availability              | 3.8.4   |
+| Azure          | Cloud Service Provider | -   |
+| Azure Data Lake Storage Gen2       | Persistent Storage for dataset             | -   |
+| Azure Data Factory       | ETL pipeline Scheduler              | -   |
+| Python           | Programming for Core Spark Job Logic          | -   |
 | Apache Spark           | Distributed Computing          | 3.3.0   |
-| Apache Hive            | Data Warehousing               | 3.1.3   |
-| Apache Airflow         | Workflow Scheduling            | 2.7.2   |
-| MySQL                  | Metastore                      | 8.0.39  |
-| Oracle Database        | Workflow Scheduling            | 19.0.0  |
-| Azure Cloud ClickHouse | OLAP Analysis                  | 24.12   |
-| Microsoft PowerBI      | BI Dashboard                   | latest  |
-| Prometheus             | Monitoring                     | 2.52.0  |
-| Grafana                | Monitoring GUI                 | 10.3.1  |
-| Docker                 | Containerization               | 28.0.1  |
+| Azure Databricks            | Cluster Compute Workspace               | -   |
+| Delta Lake            | Lakehouse Architecture               | -   |
+| Unity Catelog            |                | -   |
+| Power BI            | Data Visualization               | -   |
+
+
 
 ## [Source Code Instruction for Use](./src/README.md) `/src`
 
