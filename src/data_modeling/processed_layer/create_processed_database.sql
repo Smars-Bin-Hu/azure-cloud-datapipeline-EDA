@@ -1,9 +1,7 @@
 -- Databricks notebook source
-CREATE DATABASE IF NOT EXISTS f1_processed
-LOCATION "/mnt/formula1dl/processed"
+CREATE DATABASE IF NOT EXISTS hive_metastore.f1_processed
+LOCATION "/mnt/smarsproject0datalake/processed"
 
 -- COMMAND ----------
 
-DESC DATABASE f1_processed;
-
--- COMMAND ---------
+DESC DATABASE hive_metastore.f1_processed;

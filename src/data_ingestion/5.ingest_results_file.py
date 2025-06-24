@@ -9,7 +9,7 @@ v_data_source = dbutils.widgets.get("p_data_source")
 
 # COMMAND ----------
 
-dbutils.widgets.text("p_file_date", "2021-03-28")
+dbutils.widgets.text("p_file_date", "2021-03-21")
 v_file_date = dbutils.widgets.get("p_file_date")
 
 # COMMAND ----------
@@ -124,20 +124,17 @@ dbutils.notebook.exit("Success")
 
 # MAGIC %sql
 # MAGIC SELECT COUNT(1)
-# MAGIC   FROM f1_processed.results;
+# MAGIC   FROM hive_metastore.f1_processed.results;
 
 # COMMAND ----------
 
 # MAGIC %sql
 # MAGIC SELECT race_id, driver_id, COUNT(1) 
-# MAGIC FROM f1_processed.results
+# MAGIC FROM hive_metastore.f1_processed.results
 # MAGIC GROUP BY race_id, driver_id
 # MAGIC HAVING COUNT(1) > 1
 # MAGIC ORDER BY race_id, driver_id DESC;
 
 # COMMAND ----------
 
-# MAGIC %sql SELECT * FROM f1_processed.results WHERE race_id = 540 AND driver_id = 229;
-
-# COMMAND ----------
-
+# MAGIC %sql SELECT * FROM hive_metastore.f1_processed.results WHERE race_id = 540 AND driver_id = 229;

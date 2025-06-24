@@ -72,16 +72,16 @@ constructor_final_df = add_ingestion_date(constructor_renamed_df)
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ##### Step 4 Write output to parquet file
+# MAGIC ##### Step 4 Write output to delta file
 
 # COMMAND ----------
 
-constructor_final_df.write.mode("overwrite").format("delta").saveAsTable("f1_processed.constructors")
+constructor_final_df.write.mode("overwrite").format("delta").saveAsTable("hive_metastore.f1_processed.constructors")
 
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM f1_processed.constructors;
+# MAGIC SELECT * FROM hive_metastore.f1_processed.constructors;
 
 # COMMAND ----------
 

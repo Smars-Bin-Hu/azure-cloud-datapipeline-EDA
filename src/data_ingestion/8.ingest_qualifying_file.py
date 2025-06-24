@@ -88,6 +88,3 @@ merge_delta_data(final_df, 'f1_processed', 'qualifying', processed_folder_path, 
 # COMMAND ----------
 
 dbutils.notebook.exit("Success")
-
-# COMMAND ----------
-

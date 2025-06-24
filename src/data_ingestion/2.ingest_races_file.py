@@ -89,16 +89,16 @@ races_selected_df = races_with_ingestion_date_df \
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ##### Write the output to processed container in parquet format
+# MAGIC ##### Write the output to processed container in delta format
 
 # COMMAND ----------
 
-races_selected_df.write.mode("overwrite").partitionBy('race_year').format("delta").saveAsTable("f1_processed.races")
+races_selected_df.write.mode("overwrite").partitionBy('race_year').format("delta").saveAsTable("hive_metastore.f1_processed.races")
 
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM f1_processed.races;
+# MAGIC SELECT * FROM hive_metastore.f1_processed.races;
 
 # COMMAND ----------
 

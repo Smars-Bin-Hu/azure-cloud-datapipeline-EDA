@@ -95,16 +95,16 @@ drivers_final_df = drivers_with_columns_df.drop(col("url"))
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ##### Step 4 - Write to output to processed container in parquet format
+# MAGIC ##### Step 4 - Write to output to processed container in delta format
 
 # COMMAND ----------
 
-drivers_final_df.write.mode("overwrite").format("delta").saveAsTable("f1_processed.drivers")
+drivers_final_df.write.mode("overwrite").format("delta").saveAsTable("hive_metastore.f1_processed.drivers")
 
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM f1_processed.drivers
+# MAGIC SELECT * FROM hive_metastore.f1_processed.drivers
 
 # COMMAND ----------
 

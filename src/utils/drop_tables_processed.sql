@@ -4,11 +4,9 @@
 
 -- COMMAND ----------
 
-DROP DATABASE IF EXISTS f1_processed CASCADE;
+DROP DATABASE IF EXISTS hive_metastore.f1_processed CASCADE;
 
 -- COMMAND ----------
 
-CREATE DATABASE IF NOT EXISTS f1_processed
-LOCATION "/mnt/formula1dl/processed";
-
--- COMMAND ----------
+CREATE DATABASE IF NOT EXISTS hive_metastore.f1_processed
+LOCATION "/mnt/smarsproject0datalake/processed";

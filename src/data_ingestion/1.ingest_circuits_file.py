@@ -30,6 +30,7 @@ v_file_date = dbutils.widgets.get("p_file_date")
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType, DoubleType
 
 # COMMAND ----------
+
 # create schema for `circuits` table
 circuits_schema = StructType(fields=[StructField("circuitId", IntegerType(), False),
                                      StructField("circuitRef", StringType(), True),
@@ -43,6 +44,7 @@ circuits_schema = StructType(fields=[StructField("circuitId", IntegerType(), Fal
 ])
 
 # COMMAND ----------
+
 # read data
 circuits_df = spark.read \
     .option("header", True) \
@@ -104,16 +106,16 @@ circuits_final_df = add_ingestion_date(circuits_renamed_df)
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ##### Step 5 - Write data to datalake as parquet
+# MAGIC ##### Step 5 - Write data to datalake as delta
 
 # COMMAND ----------
 
-circuits_final_df.write.mode("overwrite").format("delta").saveAsTable("f1_processed.circuits")
+circuits_final_df.write.mode("overwrite").format("delta").saveAsTable("hive_metastore.f1_processed.circuits")
 
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM f1_processed.circuits;
+# MAGIC SELECT * FROM hive_metastore.f1_processed.circuits;
 
 # COMMAND ----------
 
