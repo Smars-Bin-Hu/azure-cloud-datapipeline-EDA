@@ -4,7 +4,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run "../../utils/common_functions"
+# MAGIC %run "./common_functions"
 
 # COMMAND ----------
 
