@@ -5,7 +5,7 @@ v_file_date = dbutils.widgets.get("p_file_date")
 # COMMAND ----------
 
 spark.sql(f"""
-              CREATE TABLE IF NOT EXISTS f1_presentation.calculated_race_results
+              CREATE TABLE IF NOT EXISTS hive_metastore.f1_presentation.calculated_race_results
               (
               race_year INT,
               team_name STRING,
@@ -45,7 +45,7 @@ spark.sql(f"""
 # COMMAND ----------
 
 spark.sql(f"""
-              MERGE INTO f1_presentation.calculated_race_results tgt
+              MERGE INTO hive_metastore.f1_presentation.calculated_race_results tgt
               USING race_result_updated upd
               ON (tgt.driver_id = upd.driver_id AND tgt.race_id = upd.race_id)
               WHEN MATCHED THEN
@@ -66,7 +66,7 @@ spark.sql(f"""
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT COUNT(1) FROM f1_presentation.calculated_race_results;
+# MAGIC SELECT COUNT(1) FROM hive_metastore.f1_presentation.calculated_race_results;
 
 # COMMAND ----------
 
