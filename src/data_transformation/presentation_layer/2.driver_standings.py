@@ -69,7 +69,7 @@ merge_delta_data(final_df, 'f1_presentation', 'driver_standings', presentation_f
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM hive_metastore.f1_presentation.driver_standings WHERE race_year = 2021;
+# MAGIC SELECT * FROM hive_metastore.f1_presentation.driver_standings WHERE race_year <= 2021;
 
 # COMMAND ----------
 
