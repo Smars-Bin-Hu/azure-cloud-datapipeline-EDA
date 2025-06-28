@@ -75,6 +75,16 @@ TBLPROPERTIES (
 
 -- COMMAND ----------
 
+DROP TABLE IF EXISTS hive_metastore.f1_presentation.driver_standings;
+
+CREATE TABLE hive_metastore.f1_presentation.driver_standings
+USING DELTA
+LOCATION '/mnt/smarsproject0datalake/presentation/driver_standings';
+
+select * from hive_metastore.f1_presentation.driver_standings;
+
+-- COMMAND ----------
+
 
 -- restore schema hive_metastore.f1_presentation.race_results in the hive metastore
 CREATE TABLE hive_metastore.f1_presentation.race_results (

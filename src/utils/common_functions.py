@@ -98,7 +98,7 @@ def merge_delta_data(input_df, db_name, table_name, folder_path, merge_condition
   """
   spark.conf.set("spark.databricks.optimizer.dynamicPartitionPruning","true")
 
-  if (spark._jsparkSession.catalog().tableExists(f"{db_name}.{table_name}")):
+  if (spark._jsparkSession.catalog().tableExists(f"hive_metastore.{db_name}.{table_name}")):
     deltaTable = DeltaTable.forPath(spark, f"{folder_path}/{table_name}")
     deltaTable.alias("tgt").merge(
         input_df.alias("src"),
@@ -107,7 +107,7 @@ def merge_delta_data(input_df, db_name, table_name, folder_path, merge_condition
       .whenNotMatchedInsertAll()\
       .execute()
   else:
-    input_df.write.mode("overwrite").partitionBy(partition_column).format("delta").saveAsTable(f"hive_metastore.{db_name}.{table_name}")
+    input_df.write.partitionBy(partition_column).format("delta").saveAsTable(f"hive_metastore.{db_name}.{table_name}")
 
 # COMMAND ----------
 
@@ -131,3 +131,10 @@ def mount_adls(storage_account_name, container_name):
     
     display(dbutils.fs.mounts())
   
+
+# COMMAND ----------
+
+from delta.tables import DeltaTable
+dt = DeltaTable.forPath(spark, "/mnt/smarsproject0datalake/presentation/driver_standings")
+dt.history(20).show(truncate=False)   # 最近 20 条
+
