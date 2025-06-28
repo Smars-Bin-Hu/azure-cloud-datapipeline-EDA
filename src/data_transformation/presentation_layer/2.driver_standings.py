@@ -78,6 +78,3 @@ merge_delta_data(final_df, 'f1_presentation', 'driver_standings', presentation_f
 # MAGIC   FROM hive_metastore.f1_presentation.driver_standings
 # MAGIC  GROUP BY race_year
 # MAGIC  ORDER BY race_year DESC;
-
-# COMMAND ----------
-
