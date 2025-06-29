@@ -73,7 +73,7 @@
 							{
 								"activity": "Get Raw Folder Detail",
 								"dependencyConditions": [
-									"Skipped"
+									"Succeeded"
 								]
 							}
 						],
@@ -158,7 +158,7 @@
 										{
 											"activity": "2_ingest_races_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -195,7 +195,7 @@
 										{
 											"activity": "3_ingest_constructors_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -232,7 +232,7 @@
 										{
 											"activity": "4_ingest_drivers_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -269,7 +269,7 @@
 										{
 											"activity": "5_ingest_results_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -306,7 +306,7 @@
 										{
 											"activity": "6_ingest_pit_stops_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -343,7 +343,7 @@
 										{
 											"activity": "7_ingest_lap_times_file_copy1",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -406,7 +406,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Get Raw Folder Detail",
+						"name": "Get Processed circuits Detail",
 						"type": "GetMetadata",
 						"dependsOn": [],
 						"policy": {
@@ -419,14 +419,9 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataset": {
-								"referenceName": "dataset_formula1_raw",
+								"referenceName": "ds_processed_layer_circuits",
 								"type": "DatasetReference",
-								"parameters": {
-									"p_window_end_date": {
-										"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
-										"type": "Expression"
-									}
-								}
+								"parameters": {}
 							},
 							"fieldList": [
 								"exists"
@@ -446,16 +441,58 @@
 						"type": "IfCondition",
 						"dependsOn": [
 							{
-								"activity": "Get Raw Folder Detail",
+								"activity": "Get Processed circuits Detail",
 								"dependencyConditions": [
-									"Skipped"
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed constructors Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed drivers Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed lap_times Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed pit_stops Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed qualifying Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed races Detail",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "Get Processed results Detail",
+								"dependencyConditions": [
+									"Succeeded"
 								]
 							}
 						],
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@activity('Get Raw Folder Detail').output.exists",
+								"value": "@and(\n    activity('Get Processed circuits Detail').output.exists,\n    and(\n        activity('Get Processed constructors Detail').output.exists,\n        and(\n            activity('Get Processed drivers Detail').output.exists,\n            and(\n                activity('Get Processed lap_times Detail').output.exists,\n                and(\n                    activity('Get Processed pit_stops Detail').output.exists,\n                    and(\n                        activity('Get Processed qualifying Detail').output.exists,\n                        and(\n                            activity('Get Processed races Detail').output.exists,\n                            activity('Get Processed results Detail').output.exists\n                        )\n                    )\n                )\n            )\n        )\n    )\n)\n",
 								"type": "Expression"
 							},
 							"ifTrueActivities": [
@@ -496,7 +533,7 @@
 										{
 											"activity": "1_race_results",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -531,9 +568,9 @@
 									"type": "DatabricksNotebook",
 									"dependsOn": [
 										{
-											"activity": "2_driver_standings",
+											"activity": "1_race_results",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -568,9 +605,15 @@
 									"type": "DatabricksNotebook",
 									"dependsOn": [
 										{
+											"activity": "2_driver_standings",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										},
+										{
 											"activity": "3_constructor_standings",
 											"dependencyConditions": [
-												"Skipped"
+												"Succeeded"
 											]
 										}
 									],
@@ -602,6 +645,223 @@
 								}
 							]
 						}
+					},
+					{
+						"name": "Get Processed constructors Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_constructors",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed drivers Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_drivers",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed lap_times Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_lap_times",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed pit_stops Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_pit_stops",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed qualifying Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_qualifying",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed races Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_races",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "Get Processed results Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_processed_layer_results",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
 					}
 				],
 				"policy": {
@@ -622,7 +882,14 @@
 				"lastPublishTime": "2025-06-29T06:04:57Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/dataset_formula1_raw')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_circuits')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_constructors')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_drivers')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_lap_times')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_pit_stops')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_qualifying')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_races')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_layer_results')]",
 				"[concat(variables('factoryId'), '/linkedServices/azure_cloud_datapipeline_EDA_project_databrick_ws')]"
 			]
 		},
@@ -678,6 +945,1958 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_circuits')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "circuits",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_constructors')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "constructors",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_drivers')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "drivers",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_lap_times')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "lap_times",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_pit_stops')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "pit_stops",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_qualifying')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "qualifying",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_races')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "races",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_layer_results')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "results",
+						"fileSystem": "processed"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"commitInfo": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"userId": {
+									"type": "string"
+								},
+								"userName": {
+									"type": "string"
+								},
+								"operation": {
+									"type": "string"
+								},
+								"operationParameters": {
+									"type": "object",
+									"properties": {
+										"isManaged": {
+											"type": "string"
+										},
+										"description": {
+											"type": "null"
+										},
+										"partitionBy": {
+											"type": "string"
+										},
+										"properties": {
+											"type": "string"
+										}
+									}
+								},
+								"notebook": {
+									"type": "object",
+									"properties": {
+										"notebookId": {
+											"type": "string"
+										}
+									}
+								},
+								"clusterId": {
+									"type": "string"
+								},
+								"isolationLevel": {
+									"type": "string"
+								},
+								"isBlindAppend": {
+									"type": "boolean"
+								},
+								"operationMetrics": {
+									"type": "object",
+									"properties": {
+										"numFiles": {
+											"type": "string"
+										},
+										"numOutputRows": {
+											"type": "string"
+										},
+										"numOutputBytes": {
+											"type": "string"
+										}
+									}
+								},
+								"engineInfo": {
+									"type": "string"
+								},
+								"txnId": {
+									"type": "string"
+								},
+								"job": {
+									"type": "object",
+									"properties": {
+										"jobId": {
+											"type": "string"
+										},
+										"jobName": {
+											"type": "string"
+										},
+										"runId": {
+											"type": "string"
+										},
+										"jobOwnerId": {
+											"type": "string"
+										},
+										"triggerType": {
+											"type": "string"
+										}
+									}
+								},
+								"readVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"protocol": {
+							"type": "object",
+							"properties": {
+								"minReaderVersion": {
+									"type": "integer"
+								},
+								"minWriterVersion": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"format": {
+									"type": "object",
+									"properties": {
+										"provider": {
+											"type": "string"
+										},
+										"options": {
+											"type": "object"
+										}
+									}
+								},
+								"schemaString": {
+									"type": "string"
+								},
+								"partitionColumns": {
+									"type": "array"
+								},
+								"configuration": {
+									"type": "object"
+								},
+								"createdTime": {
+									"type": "integer"
+								}
+							}
+						},
+						"add": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"modificationTime": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"stats": {
+									"type": "string"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"remove": {
+							"type": "object",
+							"properties": {
+								"path": {
+									"type": "string"
+								},
+								"deletionTimestamp": {
+									"type": "integer"
+								},
+								"dataChange": {
+									"type": "boolean"
+								},
+								"extendedFileMetadata": {
+									"type": "boolean"
+								},
+								"partitionValues": {
+									"type": "object"
+								},
+								"size": {
+									"type": "integer"
+								},
+								"tags": {
+									"type": "object",
+									"properties": {
+										"INSERTION_TIME": {
+											"type": "string"
+										},
+										"MIN_INSERTION_TIME": {
+											"type": "string"
+										},
+										"MAX_INSERTION_TIME": {
+											"type": "string"
+										},
+										"OPTIMIZE_TARGET_SIZE": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/azure_cloud_datapipeline_EDA_project_databrick_ws')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -709,6 +2928,79 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/batch_workflow')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Execute data ingestion",
+						"type": "ExecutePipeline",
+						"dependsOn": [],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "ppl_formula1_project_data_ingestion",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {
+								"p_window_end_date": {
+									"value": "@pipeline().parameters.p_window_end_date",
+									"type": "Expression"
+								}
+							}
+						}
+					},
+					{
+						"name": "Execute data transformation",
+						"type": "ExecutePipeline",
+						"dependsOn": [
+							{
+								"activity": "Execute data ingestion",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "ppl_formula1_project_data_transformation",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {
+								"p_window_end_date": {
+									"value": "@pipeline().parameters.p_window_end_date",
+									"type": "Expression"
+								}
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"p_window_end_date": {
+						"type": "String"
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/ppl_formula1_project_data_ingestion')]",
+				"[concat(variables('factoryId'), '/pipelines/ppl_formula1_project_data_transformation')]"
+			]
 		}
 	]
 }
