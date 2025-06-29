@@ -39,49 +39,49 @@
 					{
 						"activity": "Get Processed circuits Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed constructors Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed drivers Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed lap_times Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed pit_stops Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed qualifying Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed races Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Get Processed results Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					}
 				],
@@ -129,7 +129,7 @@
 								{
 									"activity": "1_race_results",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -166,7 +166,7 @@
 								{
 									"activity": "1_race_results",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -203,13 +203,13 @@
 								{
 									"activity": "2_driver_standings",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								},
 								{
 									"activity": "3_constructor_standings",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],

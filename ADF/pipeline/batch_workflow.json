@@ -1,0 +1,39 @@
+{
+	"name": "batch_workflow",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute data ingestion",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute data transformation",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute data ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}

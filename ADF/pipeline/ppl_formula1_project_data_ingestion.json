@@ -45,7 +45,7 @@
 					{
 						"activity": "Get Raw Folder Detail",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					}
 				],
@@ -130,7 +130,7 @@
 								{
 									"activity": "2_ingest_races_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -167,7 +167,7 @@
 								{
 									"activity": "3_ingest_constructors_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -204,7 +204,7 @@
 								{
 									"activity": "4_ingest_drivers_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -241,7 +241,7 @@
 								{
 									"activity": "5_ingest_results_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -278,7 +278,7 @@
 								{
 									"activity": "6_ingest_pit_stops_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
@@ -315,7 +315,7 @@
 								{
 									"activity": "7_ingest_lap_times_file_copy1",
 									"dependencyConditions": [
-										"Skipped"
+										"Succeeded"
 									]
 								}
 							],
