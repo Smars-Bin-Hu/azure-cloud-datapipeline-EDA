@@ -1,6 +1,6 @@
 # Azure Data Factory Creation and Configuration (Scheduler)
 
-## 1. Create data ingestion workflow 
+## 1. Create data ingestion pipeline 
 
 Create an Azure Data Factory resource in the azure subscription, 
 ![](./README/WechatIMG53.jpg)
@@ -38,5 +38,25 @@ below is the if-True activity of the if-condition activity, we should copy paste
 ![](./README/WechatIMG62.jpg)
 
 
+## 2. create the data transform pipeline
 
+Similar process, let us create the transform pipeline. Below is some different point screenshot.
+
+![](./README/WechatIMG64.jpg)
+
+## 3. create execute pipeline
+
+we could use the `execute pipeline` activity to connect the above 2 pipeline.
+
+![](./README/WechatIMG66.jpg)
+![](./README/WechatIMG67.jpg)
+
+## 4. create ADF trigger
+
+we could use ADF trigger to launch the data pipeline in the certain date or time.
+
+Below is showing how to create the trigger
+![](./README/WechatIMG68.jpg)
+
+add trigger in our pipeline `batch_workflow`, using `@trigger().outputs.windowEndTime`
 
