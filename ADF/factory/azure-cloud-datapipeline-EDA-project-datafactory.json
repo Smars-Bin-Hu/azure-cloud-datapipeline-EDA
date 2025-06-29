@@ -1,0 +1,9 @@
+{
+	"name": "azure-cloud-datapipeline-EDA-project-datafactory",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7c32313b-9299-4111-80c6-7f003137873b",
+		"tenantId": "01a50ea2-9608-4f72-bbae-9883f47396b8"
+	}
+}

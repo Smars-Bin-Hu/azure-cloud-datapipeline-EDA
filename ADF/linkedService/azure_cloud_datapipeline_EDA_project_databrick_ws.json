@@ -1,0 +1,14 @@
+{
+	"name": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-784649387661243.3.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/2e957040-0be2-41fc-b5bc-88d70ec4398f/resourceGroups/azure-cloud-datapipeline-EDA-project/providers/Microsoft.Databricks/workspaces/azure-cloud-datapipeline-EDA-project-ws",
+			"existingClusterId": "0627-235146-2o4y23y2"
+		}
+	}
+}
