@@ -18,6 +18,10 @@
 		"ls_smarsproject0datalake_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://smarsproject0datalake.dfs.core.windows.net/"
+		},
+		"trg_formula1_data_batch_flow_properties_pipeline_parameters_p_window_end_date": {
+			"type": "string",
+			"defaultValue": "@trigger().outputs.windowEndTime"
 		}
 	},
 	"variables": {
@@ -3000,6 +3004,39 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/ppl_formula1_project_data_ingestion')]",
 				"[concat(variables('factoryId'), '/pipelines/ppl_formula1_project_data_transformation')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trg_formula1_data_batch_flow')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipeline": {
+					"pipelineReference": {
+						"referenceName": "batch_workflow",
+						"type": "PipelineReference"
+					},
+					"parameters": {
+						"p_window_end_date": "[parameters('trg_formula1_data_batch_flow_properties_pipeline_parameters_p_window_end_date')]"
+					}
+				},
+				"type": "TumblingWindowTrigger",
+				"typeProperties": {
+					"frequency": "Hour",
+					"interval": 168,
+					"startTime": "2021-03-14T22:00:00Z",
+					"delay": "00:00:00",
+					"maxConcurrency": 50,
+					"retryPolicy": {
+						"intervalInSeconds": 30
+					},
+					"dependsOn": []
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/batch_workflow')]"
 			]
 		}
 	]

@@ -13,6 +13,9 @@
 		},
 		"ls_smarsproject0datalake_properties_typeProperties_url": {
 			"value": "https://smarsproject0datalake.dfs.core.windows.net/"
+		},
+		"trg_formula1_data_batch_flow_properties_pipeline_parameters_p_window_end_date": {
+			"value": "@trigger().outputs.windowEndTime"
 		}
 	}
 }
