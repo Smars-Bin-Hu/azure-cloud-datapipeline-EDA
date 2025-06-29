@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azure-cloud-datapipeline-EDA-project-datafactory"
+		},
+		"ls_smarsproject0datalake_accountKey": {
+			"value": ""
+		},
+		"azure_cloud_datapipeline_EDA_project_databrick_ws_properties_typeProperties_existingClusterId": {
+			"value": "0627-235146-2o4y23y2"
+		},
+		"ls_smarsproject0datalake_properties_typeProperties_url": {
+			"value": "https://smarsproject0datalake.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

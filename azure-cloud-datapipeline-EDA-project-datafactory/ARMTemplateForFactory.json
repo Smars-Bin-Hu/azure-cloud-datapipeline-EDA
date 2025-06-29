@@ -1,0 +1,714 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "azure-cloud-datapipeline-EDA-project-datafactory"
+		},
+		"ls_smarsproject0datalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_smarsproject0datalake'"
+		},
+		"azure_cloud_datapipeline_EDA_project_databrick_ws_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0627-235146-2o4y23y2"
+		},
+		"ls_smarsproject0datalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://smarsproject0datalake.dfs.core.windows.net/"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/ppl_formula1_project_data_ingestion')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Get Raw Folder Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "dataset_formula1_raw",
+								"type": "DatasetReference",
+								"parameters": {
+									"p_window_end_date": {
+										"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
+										"type": "Expression"
+									}
+								}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "If Raw Folder Exists",
+						"type": "IfCondition",
+						"dependsOn": [
+							{
+								"activity": "Get Raw Folder Detail",
+								"dependencyConditions": [
+									"Skipped"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"expression": {
+								"value": "@activity('Get Raw Folder Detail').output.exists",
+								"type": "Expression"
+							},
+							"ifTrueActivities": [
+								{
+									"name": "1_ingest_circuit_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/1.ingest_circuits_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "2_ingest_races_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "1_ingest_circuit_file_copy1",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/2.ingest_races_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "3_ingest_constructors_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "2_ingest_races_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/3.ingest_constructors_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "4_ingest_drivers_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "3_ingest_constructors_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/4.ingest_drivers_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "5_ingest_results_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "4_ingest_drivers_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/5.ingest_results_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "6_ingest_pit_stops_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "5_ingest_results_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/6.ingest_pit_stops_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "7_ingest_lap_times_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "6_ingest_pit_stops_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/7.ingest_lap_times_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "8_ingest_qualifying_file_copy1",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "7_ingest_lap_times_file_copy1",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_ingestion/8.ingest_qualifying_file",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								}
+							]
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"p_window_end_date": {
+						"type": "string"
+					}
+				},
+				"variables": {
+					"v_data_source": {
+						"type": "String",
+						"defaultValue": "Ergast API"
+					}
+				},
+				"annotations": [],
+				"lastPublishTime": "2025-06-29T06:04:57Z"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/dataset_formula1_raw')]",
+				"[concat(variables('factoryId'), '/linkedServices/azure_cloud_datapipeline_EDA_project_databrick_ws')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ppl_formula1_project_data_transformation')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Get Raw Folder Detail",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "dataset_formula1_raw",
+								"type": "DatasetReference",
+								"parameters": {
+									"p_window_end_date": {
+										"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
+										"type": "Expression"
+									}
+								}
+							},
+							"fieldList": [
+								"exists"
+							],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "JsonReadSettings"
+							}
+						}
+					},
+					{
+						"name": "If Raw Folder Exists",
+						"type": "IfCondition",
+						"dependsOn": [
+							{
+								"activity": "Get Raw Folder Detail",
+								"dependencyConditions": [
+									"Skipped"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"expression": {
+								"value": "@activity('Get Raw Folder Detail').output.exists",
+								"type": "Expression"
+							},
+							"ifTrueActivities": [
+								{
+									"name": "1_race_results",
+									"type": "DatabricksNotebook",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_transformation/presentation_layer/1.race_results",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "2_driver_standings",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "1_race_results",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_transformation/presentation_layer/2.driver_standings",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "3_constructor_standings",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "2_driver_standings",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_transformation/presentation_layer/3.constructor_standings",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								},
+								{
+									"name": "4_calculated_race_results",
+									"type": "DatabricksNotebook",
+									"dependsOn": [
+										{
+											"activity": "3_constructor_standings",
+											"dependencyConditions": [
+												"Skipped"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"notebookPath": "/Users/hubin.smars@gmail.com/azure-cloud-datapipeline-EDA/src/data_transformation/presentation_layer/4.calculated_race_results",
+										"baseParameters": {
+											"p_data_source": {
+												"value": "@variables('v_data_source')",
+												"type": "Expression"
+											},
+											"p_file_date": {
+												"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')\n",
+												"type": "Expression"
+											}
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "azure_cloud_datapipeline_EDA_project_databrick_ws",
+										"type": "LinkedServiceReference"
+									}
+								}
+							]
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"p_window_end_date": {
+						"type": "string"
+					}
+				},
+				"variables": {
+					"v_data_source": {
+						"type": "String",
+						"defaultValue": "Ergast API"
+					}
+				},
+				"annotations": [],
+				"lastPublishTime": "2025-06-29T06:04:57Z"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/dataset_formula1_raw')]",
+				"[concat(variables('factoryId'), '/linkedServices/azure_cloud_datapipeline_EDA_project_databrick_ws')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dataset_formula1_raw')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_smarsproject0datalake",
+					"type": "LinkedServiceReference"
+				},
+				"parameters": {
+					"p_window_end_date": {
+						"type": "string"
+					}
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": {
+							"value": "@formatDateTime(dataset().p_window_end_date,'yyyy-MM-dd')",
+							"type": "Expression"
+						},
+						"fileSystem": "raw"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"constructorId": {
+							"type": "integer"
+						},
+						"constructorRef": {
+							"type": "string"
+						},
+						"name": {
+							"type": "string"
+						},
+						"nationality": {
+							"type": "string"
+						},
+						"url": {
+							"type": "string"
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_smarsproject0datalake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/azure_cloud_datapipeline_EDA_project_databrick_ws')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-784649387661243.3.azuredatabricks.net",
+					"authentication": "MSI",
+					"workspaceResourceId": "/subscriptions/2e957040-0be2-41fc-b5bc-88d70ec4398f/resourceGroups/azure-cloud-datapipeline-EDA-project/providers/Microsoft.Databricks/workspaces/azure-cloud-datapipeline-EDA-project-ws",
+					"existingClusterId": "[parameters('azure_cloud_datapipeline_EDA_project_databrick_ws_properties_typeProperties_existingClusterId')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_smarsproject0datalake')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('ls_smarsproject0datalake_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('ls_smarsproject0datalake_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
