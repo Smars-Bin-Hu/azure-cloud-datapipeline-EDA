@@ -1,0 +1,239 @@
+{
+	"name": "ds_processed_layer_pit_stops",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_smarsproject0datalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "pit_stops",
+				"fileSystem": "processed"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"commitInfo": {
+					"type": "object",
+					"properties": {
+						"timestamp": {
+							"type": "integer"
+						},
+						"userId": {
+							"type": "string"
+						},
+						"userName": {
+							"type": "string"
+						},
+						"operation": {
+							"type": "string"
+						},
+						"operationParameters": {
+							"type": "object",
+							"properties": {
+								"isManaged": {
+									"type": "string"
+								},
+								"description": {
+									"type": "null"
+								},
+								"partitionBy": {
+									"type": "string"
+								},
+								"properties": {
+									"type": "string"
+								}
+							}
+						},
+						"notebook": {
+							"type": "object",
+							"properties": {
+								"notebookId": {
+									"type": "string"
+								}
+							}
+						},
+						"clusterId": {
+							"type": "string"
+						},
+						"isolationLevel": {
+							"type": "string"
+						},
+						"isBlindAppend": {
+							"type": "boolean"
+						},
+						"operationMetrics": {
+							"type": "object",
+							"properties": {
+								"numFiles": {
+									"type": "string"
+								},
+								"numOutputRows": {
+									"type": "string"
+								},
+								"numOutputBytes": {
+									"type": "string"
+								}
+							}
+						},
+						"engineInfo": {
+							"type": "string"
+						},
+						"txnId": {
+							"type": "string"
+						},
+						"job": {
+							"type": "object",
+							"properties": {
+								"jobId": {
+									"type": "string"
+								},
+								"jobName": {
+									"type": "string"
+								},
+								"runId": {
+									"type": "string"
+								},
+								"jobOwnerId": {
+									"type": "string"
+								},
+								"triggerType": {
+									"type": "string"
+								}
+							}
+						},
+						"readVersion": {
+							"type": "integer"
+						}
+					}
+				},
+				"protocol": {
+					"type": "object",
+					"properties": {
+						"minReaderVersion": {
+							"type": "integer"
+						},
+						"minWriterVersion": {
+							"type": "integer"
+						}
+					}
+				},
+				"metaData": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string"
+						},
+						"format": {
+							"type": "object",
+							"properties": {
+								"provider": {
+									"type": "string"
+								},
+								"options": {
+									"type": "object"
+								}
+							}
+						},
+						"schemaString": {
+							"type": "string"
+						},
+						"partitionColumns": {
+							"type": "array"
+						},
+						"configuration": {
+							"type": "object"
+						},
+						"createdTime": {
+							"type": "integer"
+						}
+					}
+				},
+				"add": {
+					"type": "object",
+					"properties": {
+						"path": {
+							"type": "string"
+						},
+						"partitionValues": {
+							"type": "object"
+						},
+						"size": {
+							"type": "integer"
+						},
+						"modificationTime": {
+							"type": "integer"
+						},
+						"dataChange": {
+							"type": "boolean"
+						},
+						"stats": {
+							"type": "string"
+						},
+						"tags": {
+							"type": "object",
+							"properties": {
+								"INSERTION_TIME": {
+									"type": "string"
+								},
+								"MIN_INSERTION_TIME": {
+									"type": "string"
+								},
+								"MAX_INSERTION_TIME": {
+									"type": "string"
+								},
+								"OPTIMIZE_TARGET_SIZE": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"remove": {
+					"type": "object",
+					"properties": {
+						"path": {
+							"type": "string"
+						},
+						"deletionTimestamp": {
+							"type": "integer"
+						},
+						"dataChange": {
+							"type": "boolean"
+						},
+						"extendedFileMetadata": {
+							"type": "boolean"
+						},
+						"partitionValues": {
+							"type": "object"
+						},
+						"size": {
+							"type": "integer"
+						},
+						"tags": {
+							"type": "object",
+							"properties": {
+								"INSERTION_TIME": {
+									"type": "string"
+								},
+								"MIN_INSERTION_TIME": {
+									"type": "string"
+								},
+								"MAX_INSERTION_TIME": {
+									"type": "string"
+								},
+								"OPTIMIZE_TARGET_SIZE": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

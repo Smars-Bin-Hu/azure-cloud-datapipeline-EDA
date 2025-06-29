@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Raw Folder Detail",
+				"name": "Get Processed circuits Detail",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -16,14 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "dataset_formula1_raw",
-						"type": "DatasetReference",
-						"parameters": {
-							"p_window_end_date": {
-								"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "ds_processed_layer_circuits",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"exists"
@@ -43,7 +37,49 @@
 				"type": "IfCondition",
 				"dependsOn": [
 					{
-						"activity": "Get Raw Folder Detail",
+						"activity": "Get Processed circuits Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed constructors Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed drivers Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed lap_times Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed pit_stops Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed qualifying Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed races Detail",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					},
+					{
+						"activity": "Get Processed results Detail",
 						"dependencyConditions": [
 							"Skipped"
 						]
@@ -52,7 +88,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@activity('Get Raw Folder Detail').output.exists",
+						"value": "@and(\n    equals(activity('Get Processed circuits Detail').output.status, 'Succeeded'),\n    equals(activity('Get Processed constructors Detail').output.status, 'Succeeded')\n)\n",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
@@ -128,7 +164,7 @@
 							"type": "DatabricksNotebook",
 							"dependsOn": [
 								{
-									"activity": "2_driver_standings",
+									"activity": "1_race_results",
 									"dependencyConditions": [
 										"Skipped"
 									]
@@ -165,6 +201,12 @@
 							"type": "DatabricksNotebook",
 							"dependsOn": [
 								{
+									"activity": "2_driver_standings",
+									"dependencyConditions": [
+										"Skipped"
+									]
+								},
+								{
 									"activity": "3_constructor_standings",
 									"dependencyConditions": [
 										"Skipped"
@@ -198,6 +240,216 @@
 							}
 						}
 					]
+				}
+			},
+			{
+				"name": "Get Processed constructors Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_constructors",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed drivers Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_drivers",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed lap_times Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_lap_times",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed pit_stops Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_pit_stops",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed qualifying Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_qualifying",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed races Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_races",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Get Processed results Detail",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_processed_layer_results",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
 				}
 			}
 		],
