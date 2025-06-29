@@ -120,9 +120,21 @@ Once done, check out the `processed` layer and `presentation` layer in the ADLS 
 ![](./README/WechatIMG41.jpg)
 ![](./README/WechatIMG42.jpg)
 
-### Azure Data Factory Source Deployment
+### Azure Data Factory Source Deployment (using ARM Template)
 
+To get the components in the ADF, we should import the ARM Template to restore the ADF resource with components created inside.
+![](./README/WechatIMG70.jpg)
 
+#### 1. Import ARM Template in the ADF Source Control
+![](./README/WechatIMG71.jpg)
+![](./README/WechatIMG72.jpg)
+![](./README/WechatIMG73.jpg)
+
+load the ARM template for ADF. (`/devops/ADF_src/ARMTemplateForFactory.json`)
+![](./README/WechatIMG74.jpg)
+
+add storage account key in the instance details and then click `Review+create`
+![](./README/WechatIMG75.jpg)
 
 ### Delete Compute Resources
 
