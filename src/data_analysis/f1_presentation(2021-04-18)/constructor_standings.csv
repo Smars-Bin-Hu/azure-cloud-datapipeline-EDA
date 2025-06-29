@@ -1,0 +1,1082 @@
+race_year,team,total_points,wins,rank
+1960,Vanwall,0.0,0,13
+1960,Maserati,0.0,0,13
+1960,Scarab,0.0,0,13
+1960,Aston Martin,0.0,0,13
+1960,Behra-Porsche,0.0,0,13
+1960,JBW,0.0,0,13
+1960,Kurtis Kraft,0.0,0,13
+1960,Kuzma,0.0,0,13
+1960,Christensen,0.0,0,13
+1960,Ewing,0.0,0,13
+1960,Meskowski,0.0,0,13
+1960,Porsche,1.0,0,11
+1960,Trevis,1.0,0,11
+1960,Lesovsky,2.0,0,10
+1960,Cooper-Castellotti,3.0,0,7
+1960,Cooper-Maserati,3.0,0,7
+1960,Phillips,3.0,0,7
+1960,Epperly,4.0,0,6
+1960,BRM,8.0,0,5
+1960,Watson,14.0,1,4
+1960,Ferrari,43.0,1,3
+1960,Team Lotus,52.0,2,2
+1960,Cooper-Climax,102.0,6,1
+1975,Lyncar,0.0,0,14
+1975,Lola,0.0,0,14
+1975,Shadow-Matra,0.0,0,14
+1975,BRM,0.0,0,14
+1975,Fittipaldi,0.0,0,14
+1975,Maki,0.0,0,14
+1975,Surtees,0.0,0,14
+1975,Ensign,1.0,0,13
+1975,Penske,2.0,0,12
+1975,Embassy Hill,3.0,0,11
+1975,Parnelli,5.0,0,10
+1975,Williams,6.0,0,9
+1975,Team Lotus,9.0,0,8
+1975,March,9.0,1,7
+1975,Shadow-Ford,9.5,0,6
+1975,Tyrrell,32.0,1,5
+1975,Hesketh,33.0,1,4
+1975,Brabham,61.0,2,3
+1975,McLaren,65.0,3,2
+1975,Ferrari,89.5,6,1
+1959,Cooper-Maserati,0.0,0,8
+1959,JBW,0.0,0,8
+1959,Vanwall,0.0,0,8
+1959,Aston Martin,0.0,0,8
+1959,Cooper-OSCA,0.0,0,8
+1959,Cooper-Borgward,0.0,0,8
+1959,Connaught,0.0,0,8
+1959,Porsche,0.0,0,8
+1959,Tec-Mec,0.0,0,8
+1959,Maserati,0.0,0,8
+1959,Fry,0.0,0,8
+1959,Kuzma,0.0,0,8
+1959,Moore,0.0,0,8
+1959,Dunn,0.0,0,8
+1959,Phillips,0.0,0,8
+1959,Christensen,0.0,0,8
+1959,Kurtis Kraft,0.0,0,8
+1959,Elder,0.0,0,8
+1959,Sutton,0.0,0,8
+1959,Team Lotus,5.0,0,5
+1959,Epperly,5.0,0,5
+1959,Lesovsky,5.0,0,5
+1959,Watson,14.0,1,4
+1959,BRM,22.5,1,3
+1959,Ferrari,67.0,2,2
+1959,Cooper-Climax,97.5,5,1
+1952,BMW,0.0,0,12
+1952,AFM,0.0,0,12
+1952,Veritas,0.0,0,12
+1952,ERA,0.0,0,12
+1952,Alta,0.0,0,12
+1952,Trevis,0.0,0,12
+1952,Aston Butterworth,0.0,0,12
+1952,Stevens,0.0,0,12
+1952,Cisitalia,0.0,0,12
+1952,Bromme,0.0,0,12
+1952,Deidt,0.0,0,12
+1952,OSCA,0.0,0,12
+1952,Sherman,0.0,0,12
+1952,Watson,0.0,0,12
+1952,HWM,2.0,0,10
+1952,Simca,2.0,0,10
+1952,Frazer Nash,3.0,0,8
+1952,Lesovsky,3.0,0,8
+1952,Connaught,5.0,0,7
+1952,Kuzma,8.0,1,6
+1952,Maserati,8.5,0,5
+1952,Cooper,12.0,0,4
+1952,Kurtis Kraft,13.0,0,3
+1952,Gordini,15.0,0,2
+1952,Ferrari,120.5,7,1
+1989,Osella,0.0,0,17
+1989,Zakspeed,0.0,0,17
+1989,Euro Brun,0.0,0,17
+1989,Coloni,0.0,0,17
+1989,AGS,1.0,0,15
+1989,Larrousse,1.0,0,15
+1989,Ligier,3.0,0,13
+1989,Rial,3.0,0,13
+1989,March,4.0,0,12
+1989,Minardi,6.0,0,10
+1989,Onyx,6.0,0,10
+1989,Dallara,8.0,0,8
+1989,Brabham,8.0,0,8
+1989,Arrows,13.0,0,7
+1989,Team Lotus,15.0,0,6
+1989,Tyrrell,16.0,0,5
+1989,Benetton,39.0,1,4
+1989,Ferrari,59.0,3,3
+1989,Williams,77.0,2,2
+1989,McLaren,141.0,10,1
+1977,Kojima,0.0,0,13
+1977,Boro,0.0,0,13
+1977,Apollon,0.0,0,13
+1977,March,0.0,0,13
+1977,Renault,0.0,0,13
+1977,Hesketh,0.0,0,13
+1977,McGuire,0.0,0,13
+1977,LEC,0.0,0,13
+1977,BRM,0.0,0,13
+1977,Penske,1.0,0,12
+1977,Surtees,6.0,0,11
+1977,Ensign,10.0,0,10
+1977,Fittipaldi,11.0,0,9
+1977,Ligier,18.0,1,8
+1977,Shadow,24.0,1,7
+1977,Tyrrell,27.0,0,5
+1977,Brabham,27.0,0,5
+1977,Wolf,55.0,3,4
+1977,McLaren,65.0,3,3
+1977,Team Lotus,67.0,5,2
+1977,Ferrari,114.0,4,1
+1976,BRM,0.0,0,14
+1976,Maki,0.0,0,14
+1976,Kojima,0.0,0,14
+1976,Williams,0.0,0,14
+1976,Boro,0.0,0,14
+1976,Brabham-Ford,0.0,0,14
+1976,Wolf,0.0,0,14
+1976,Hesketh,0.0,0,14
+1976,Parnelli,1.0,0,13
+1976,Ensign,2.0,0,12
+1976,Fittipaldi,3.0,0,11
+1976,Surtees,7.0,0,10
+1976,Shadow,10.0,0,9
+1976,Brabham-Alfa Romeo,11.0,0,8
+1976,March,19.0,1,7
+1976,Ligier,20.0,0,6
+1976,Penske,20.0,1,5
+1976,Team Lotus,32.0,1,4
+1976,Tyrrell,88.0,1,3
+1976,McLaren,88.0,6,2
+1976,Ferrari,99.0,6,1
+1979,Kauhsen,0.0,0,13
+1979,Wolf,0.0,0,13
+1979,Alfa Romeo,0.0,0,13
+1979,Merzario,0.0,0,13
+1979,Ensign,0.0,0,13
+1979,Brabham-Ford,0.0,0,13
+1979,Rebaque,0.0,0,13
+1979,Fittipaldi,1.0,0,12
+1979,ATS,2.0,0,11
+1979,Shadow,3.0,0,10
+1979,Arrows,5.0,0,9
+1979,Brabham-Alfa Romeo,7.0,0,8
+1979,McLaren,15.0,0,7
+1979,Renault,26.0,1,6
+1979,Tyrrell,28.0,0,5
+1979,Team Lotus,39.0,0,4
+1979,Ligier,61.0,3,3
+1979,Williams,75.0,5,2
+1979,Ferrari,113.0,6,1
+1978,Hesketh,0.0,0,15
+1978,Theodore,0.0,0,15
+1978,Martini,0.0,0,15
+1978,ATS,0.0,0,15
+1978,Merzario,0.0,0,15
+1978,Ensign,1.0,0,13
+1978,Surtees,1.0,0,13
+1978,Renault,3.0,0,12
+1978,Shadow,6.0,0,11
+1978,Arrows,11.0,0,9
+1978,Williams,11.0,0,9
+1978,McLaren,16.0,0,8
+1978,Fittipaldi,17.0,0,7
+1978,Ligier,19.0,0,6
+1978,Wolf,24.0,0,5
+1978,Tyrrell,41.0,1,4
+1978,Ferrari,65.0,5,3
+1978,Brabham,69.0,2,2
+1978,Team Lotus,116.0,8,1
+1974,Ensign,0.0,0,13
+1974,Trojan,0.0,0,13
+1974,Parnelli,0.0,0,13
+1974,Amon,0.0,0,13
+1974,Maki,0.0,0,13
+1974,Penske,0.0,0,13
+1974,Lyncar,0.0,0,13
+1974,Token,0.0,0,13
+1974,Lola,1.0,0,12
+1974,Surtees,3.0,0,11
+1974,Iso Marlboro,4.0,0,10
+1974,March,6.0,0,9
+1974,Shadow,7.0,0,8
+1974,BRM,10.0,0,7
+1974,Hesketh,15.0,0,6
+1974,Brabham,46.0,3,5
+1974,Team Lotus,47.0,3,4
+1974,Tyrrell,59.0,2,3
+1974,McLaren,87.0,4,2
+1974,Ferrari,90.0,3,1
+1950,Alta,0.0,0,8
+1950,Cooper,0.0,0,8
+1950,ERA,0.0,0,8
+1950,Milano,0.0,0,8
+1950,Stevens,0.0,0,8
+1950,Snowberger,0.0,0,8
+1950,Moore,0.0,0,8
+1950,Adams,0.0,0,8
+1950,Olson,0.0,0,8
+1950,Watson,0.0,0,8
+1950,Wetteroth,0.0,0,8
+1950,Nichels,0.0,0,8
+1950,Marchese,0.0,0,8
+1950,Ewing,0.0,0,8
+1950,Lesovsky,0.0,0,8
+1950,Langley,0.0,0,8
+1950,Rae,0.0,0,8
+1950,Simca,3.0,0,7
+1950,Deidt,10.0,0,6
+1950,Maserati,11.0,0,5
+1950,Kurtis Kraft,13.0,1,4
+1950,Ferrari,18.0,0,3
+1950,Talbot-Lago,20.0,0,2
+1950,Alfa Romeo,89.0,6,1
+1991,Lambo,0.0,0,14
+1991,Ligier,0.0,0,14
+1991,Fondmetal,0.0,0,14
+1991,Footwork,0.0,0,14
+1991,Coloni,0.0,0,14
+1991,AGS,0.0,0,14
+1991,Larrousse,1.0,0,11
+1991,Leyton House,1.0,0,11
+1991,Lola,1.0,0,11
+1991,Team Lotus,3.0,0,9
+1991,Brabham,3.0,0,9
+1991,Dallara,5.0,0,8
+1991,Minardi,6.0,0,7
+1991,Tyrrell,12.0,0,6
+1991,Jordan,13.0,0,5
+1991,Benetton,38.5,1,4
+1991,Ferrari,55.5,0,3
+1991,Williams,125.0,7,2
+1991,McLaren,139.0,8,1
+1963,De Tomaso,0.0,0,9
+1963,Team Lotus,0.0,0,9
+1963,Stebro,0.0,0,9
+1963,LDS,0.0,0,9
+1963,Alfa Romeo,0.0,0,9
+1963,Lotus-Ford,0.0,0,9
+1963,Lotus-Borgward,0.0,0,9
+1963,Scirocco,0.0,0,9
+1963,Lola,0.0,0,9
+1963,Cooper-Maserati,0.0,0,9
+1963,Gilby,0.0,0,9
+1963,Lotus-Maserati,0.0,0,9
+1963,ATS,0.0,0,9
+1963,De Tomaso-Ferrari,0.0,0,9
+1963,Lotus-BRM,4.0,0,8
+1963,Porsche,5.0,0,7
+1963,BRP,6.0,0,6
+1963,Ferrari,27.0,1,5
+1963,Cooper-Climax,32.0,0,4
+1963,Brabham,33.0,0,3
+1963,BRM,65.0,2,2
+1963,Lotus-Climax,74.0,7,1
+1967,McLaren-Ford,0.0,0,12
+1967,LDS-Climax,0.0,0,12
+1967,Eagle-Climax,0.0,0,12
+1967,Lotus-Climax,0.0,0,12
+1967,Cooper-ATS,0.0,0,12
+1967,Protos,0.0,0,12
+1967,Matra,0.0,0,12
+1967,Lola,0.0,0,12
+1967,Brabham-Ford,0.0,0,12
+1967,Brabham-Climax,2.0,0,11
+1967,McLaren-BRM,3.0,0,10
+1967,Cooper-Climax,6.0,0,8
+1967,Lotus-BRM,6.0,0,8
+1967,Eagle-Weslake,13.0,1,7
+1967,Honda,20.0,1,6
+1967,BRM,21.0,0,5
+1967,Ferrari,23.0,0,4
+1967,Cooper-Maserati,31.0,1,3
+1967,Lotus-Ford,50.0,4,2
+1967,Brabham-Repco,100.0,4,1
+1951,OSCA,0.0,0,8
+1951,HWM,0.0,0,8
+1951,ERA,0.0,0,8
+1951,Alta,0.0,0,8
+1951,Veritas,0.0,0,8
+1951,Simca,0.0,0,8
+1951,Pawl,0.0,0,8
+1951,Deidt,0.0,0,8
+1951,Lesovsky,0.0,0,8
+1951,Moore,0.0,0,8
+1951,Kuzma,0.0,0,8
+1951,Hall,0.0,0,8
+1951,Bromme,0.0,0,8
+1951,Watson,0.0,0,8
+1951,Marchese,0.0,0,8
+1951,Trevis,0.0,0,8
+1951,Maserati,0.0,0,8
+1951,BRM,2.0,0,6
+1951,Schroeder,2.0,0,6
+1951,Sherman,3.0,0,5
+1951,Talbot-Lago,5.0,0,4
+1951,Kurtis Kraft,19.0,1,3
+1951,Alfa Romeo,67.0,4,2
+1951,Ferrari,86.0,3,1
+1990,AGS,0.0,0,11
+1990,Euro Brun,0.0,0,11
+1990,Ligier,0.0,0,11
+1990,Dallara,0.0,0,11
+1990,Life,0.0,0,11
+1990,Osella,0.0,0,11
+1990,Coloni,0.0,0,11
+1990,Onyx,0.0,0,11
+1990,Minardi,0.0,0,11
+1990,Brabham,2.0,0,9
+1990,Arrows,2.0,0,9
+1990,Team Lotus,3.0,0,8
+1990,Leyton House,7.0,0,7
+1990,Larrousse,11.0,0,6
+1990,Tyrrell,16.0,0,5
+1990,Williams,57.0,2,4
+1990,Benetton,71.0,2,3
+1990,Ferrari,110.0,6,2
+1990,McLaren,121.0,6,1
+1968,LDS,0.0,0,11
+1968,Brabham-Climax,0.0,0,11
+1968,Lola,0.0,0,11
+1968,Cooper-Maserati,0.0,0,11
+1968,Cooper-Climax,0.0,0,11
+1968,Eagle-Weslake,0.0,0,11
+1968,McLaren,0.0,0,11
+1968,McLaren-BRM,3.0,0,10
+1968,Matra,8.0,0,9
+1968,Brabham-Repco,12.0,0,8
+1968,Honda,14.0,0,7
+1968,Cooper-BRM,20.0,0,6
+1968,BRM,28.0,0,5
+1968,Ferrari,37.0,1,4
+1968,Matra-Ford,45.0,3,3
+1968,McLaren-Ford,56.0,3,2
+1968,Lotus-Ford,75.0,5,1
+1992,Fondmetal,0.0,0,14
+1992,Brabham,0.0,0,14
+1992,Andrea Moda,0.0,0,14
+1992,Larrousse,1.0,0,11
+1992,Minardi,1.0,0,11
+1992,Jordan,1.0,0,11
+1992,Dallara,2.0,0,10
+1992,March,3.0,0,9
+1992,Ligier,6.0,0,7
+1992,Footwork,6.0,0,7
+1992,Tyrrell,8.0,0,6
+1992,Team Lotus,13.0,0,5
+1992,Ferrari,21.0,0,4
+1992,Benetton,91.0,1,3
+1992,McLaren,99.0,5,2
+1992,Williams,164.0,10,1
+1985,Lola,0.0,0,10
+1985,Spirit,0.0,0,10
+1985,Alfa Romeo,0.0,0,10
+1985,RAM,0.0,0,10
+1985,Osella,0.0,0,10
+1985,Zakspeed,0.0,0,10
+1985,Minardi,0.0,0,10
+1985,Toleman,0.0,0,10
+1985,Tyrrell,7.0,0,9
+1985,Arrows,14.0,0,8
+1985,Renault,16.0,0,7
+1985,Ligier,23.0,0,6
+1985,Brabham,26.0,1,5
+1985,Team Lotus,71.0,3,4
+1985,Williams,71.0,4,3
+1985,Ferrari,82.0,2,2
+1985,McLaren,90.0,6,1
+1981,Fittipaldi,0.0,0,14
+1981,Toleman,0.0,0,14
+1981,Osella,0.0,0,14
+1981,March,0.0,0,14
+1981,Theodore,1.0,0,12
+1981,ATS,1.0,0,12
+1981,Ensign,5.0,0,11
+1981,Arrows,10.0,0,8
+1981,Tyrrell,10.0,0,8
+1981,Alfa Romeo,10.0,0,8
+1981,Team Lotus,22.0,0,7
+1981,McLaren,28.0,1,6
+1981,Ferrari,34.0,2,5
+1981,Ligier,44.0,2,4
+1981,Renault,54.0,3,3
+1981,Brabham,61.0,3,2
+1981,Williams,95.0,4,1
+1966,Eagle-Weslake,0.0,0,13
+1966,Cooper-Ferrari,0.0,0,13
+1966,Shannon,0.0,0,13
+1966,Brabham-Climax,1.0,0,10
+1966,McLaren-Serenissima,1.0,0,10
+1966,Brabham-BRM,1.0,0,10
+1966,McLaren-Ford,2.0,0,9
+1966,Honda,3.0,0,8
+1966,Eagle-Climax,4.0,0,7
+1966,Lotus-Climax,8.0,0,6
+1966,Lotus-BRM,13.0,1,5
+1966,BRM,34.0,1,4
+1966,Ferrari,42.0,2,3
+1966,Cooper-Maserati,49.0,1,2
+1966,Brabham-Repco,63.0,4,1
+1954,HWM,0.0,0,8
+1954,Klenk,0.0,0,8
+1954,Vanwall,0.0,0,8
+1954,Connaught,0.0,0,8
+1954,Cooper,0.0,0,8
+1954,Nichels,0.0,0,8
+1954,Phillips,0.0,0,8
+1954,Stevens,0.0,0,8
+1954,Pawl,0.0,0,8
+1954,Pankratz,0.0,0,8
+1954,Bromme,0.0,0,8
+1954,Schroeder,0.0,0,8
+1954,Lancia,1.0,0,7
+1954,Gordini,4.0,0,6
+1954,Kuzma,6.0,0,5
+1954,Kurtis Kraft,16.5,1,4
+1954,Maserati,46.139999866485596,2,3
+1954,Mercedes,60.140000104904175,4,2
+1954,Ferrari,74.28000020980835,2,1
+1955,Arzani-Volpini,0.0,0,7
+1955,HWM,0.0,0,7
+1955,Cooper,0.0,0,7
+1955,Gordini,0.0,0,7
+1955,Vanwall,0.0,0,7
+1955,Connaught,0.0,0,7
+1955,Trevis,0.0,0,7
+1955,Pankratz,0.0,0,7
+1955,Epperly,0.0,0,7
+1955,Pawl,0.0,0,7
+1955,Stevens,0.0,0,7
+1955,Schroeder,0.0,0,7
+1955,Phillips,0.0,0,7
+1955,Kuzma,3.0,0,6
+1955,Lancia,8.0,0,5
+1955,Maserati,20.0,0,4
+1955,Kurtis Kraft,21.0,1,3
+1955,Ferrari,28.66000008583069,1,2
+1955,Mercedes,77.0,5,1
+1982,March,0.0,0,14
+1982,Theodore,0.0,0,14
+1982,Toleman,0.0,0,14
+1982,Ensign,0.0,0,14
+1982,Fittipaldi,1.0,0,13
+1982,Osella,3.0,0,12
+1982,ATS,4.0,0,11
+1982,Arrows,5.0,0,10
+1982,Alfa Romeo,7.0,0,9
+1982,Ligier,20.0,0,8
+1982,Tyrrell,25.0,1,7
+1982,Team Lotus,30.0,1,6
+1982,Brabham,41.0,2,5
+1982,Williams,58.0,1,4
+1982,Renault,62.0,4,3
+1982,McLaren,69.0,4,2
+1982,Ferrari,74.0,3,1
+1962,Cooper,0.0,0,9
+1962,Team Lotus,0.0,0,9
+1962,De Tomaso-Alfa Romeo,0.0,0,9
+1962,LDS,0.0,0,9
+1962,Cooper-Alfa Romeo,0.0,0,9
+1962,Lotus-Borgward,0.0,0,9
+1962,Emeryson,0.0,0,9
+1962,ENB,0.0,0,9
+1962,De Tomaso,0.0,0,9
+1962,Gilby,0.0,0,9
+1962,De Tomaso-Osca,0.0,0,9
+1962,Lotus-BRM,1.0,0,8
+1962,Brabham,6.0,0,7
+1962,Lola,19.0,0,6
+1962,Porsche,20.0,1,5
+1962,Ferrari,30.0,0,4
+1962,Lotus-Climax,42.0,3,3
+1962,Cooper-Climax,45.0,1,2
+1962,BRM,62.0,4,1
+1988,Ligier,0.0,0,11
+1988,Euro Brun,0.0,0,11
+1988,Osella,0.0,0,11
+1988,Larrousse,0.0,0,11
+1988,AGS,0.0,0,11
+1988,Dallara,0.0,0,11
+1988,Coloni,0.0,0,11
+1988,Zakspeed,0.0,0,11
+1988,Minardi,1.0,0,10
+1988,Rial,3.0,0,9
+1988,Tyrrell,5.0,0,8
+1988,Williams,20.0,0,7
+1988,March,22.0,0,6
+1988,Team Lotus,23.0,0,4
+1988,Arrows,23.0,0,4
+1988,Benetton,39.0,0,3
+1988,Ferrari,65.0,1,2
+1988,McLaren,199.0,15,1
+1987,Osella,0.0,0,14
+1987,Coloni,0.0,0,14
+1987,Minardi,0.0,0,14
+1987,AGS,1.0,0,11
+1987,Ligier,1.0,0,11
+1987,March,1.0,0,11
+1987,Zakspeed,2.0,0,10
+1987,Larrousse,3.0,0,9
+1987,Brabham,10.0,0,8
+1987,Arrows,11.0,0,6
+1987,Tyrrell,11.0,0,6
+1987,Benetton,28.0,0,5
+1987,Ferrari,53.0,2,4
+1987,Team Lotus,64.0,2,3
+1987,McLaren,76.0,3,2
+1987,Williams,137.0,9,1
+1994,Team Lotus,0.0,0,12
+1994,Simtek,0.0,0,12
+1994,Pacific,0.0,0,12
+1994,Larrousse,2.0,0,11
+1994,Minardi,5.0,0,10
+1994,Footwork,9.0,0,9
+1994,Sauber,12.0,0,8
+1994,Ligier,13.0,0,6
+1994,Tyrrell,13.0,0,6
+1994,Jordan,28.0,0,5
+1994,McLaren,42.0,0,4
+1994,Ferrari,71.0,1,3
+1994,Benetton,103.0,8,2
+1994,Williams,118.0,7,1
+1983,ATS,0.0,0,12
+1983,Spirit,0.0,0,12
+1983,Ligier,0.0,0,12
+1983,Osella,0.0,0,12
+1983,RAM,0.0,0,12
+1983,Theodore,1.0,0,11
+1983,Arrows,4.0,0,10
+1983,Toleman,10.0,0,9
+1983,Team Lotus,12.0,0,8
+1983,Tyrrell,12.0,1,7
+1983,Alfa Romeo,18.0,0,6
+1983,McLaren,34.0,1,5
+1983,Williams,38.0,1,4
+1983,Brabham,72.0,4,3
+1983,Renault,79.0,4,2
+1983,Ferrari,89.0,4,1
+1984,Spirit,0.0,0,12
+1984,Tyrrell,0.0,0,12
+1984,RAM,0.0,0,12
+1984,ATS,0.0,0,12
+1984,Osella,2.0,0,11
+1984,Ligier,3.0,0,10
+1984,Arrows,6.0,0,9
+1984,Alfa Romeo,11.0,0,8
+1984,Toleman,16.0,0,7
+1984,Williams,25.5,1,6
+1984,Renault,34.0,0,5
+1984,Brabham,38.0,2,4
+1984,Team Lotus,47.0,0,3
+1984,Ferrari,57.5,1,2
+1984,McLaren,143.5,12,1
+1986,Osella,0.0,0,11
+1986,Zakspeed,0.0,0,11
+1986,AGS,0.0,0,11
+1986,Minardi,0.0,0,11
+1986,Arrows,1.0,0,10
+1986,Brabham,2.0,0,9
+1986,Lola,6.0,0,8
+1986,Tyrrell,11.0,0,7
+1986,Benetton,19.0,1,6
+1986,Ligier,29.0,0,5
+1986,Ferrari,37.0,0,4
+1986,Team Lotus,58.0,2,3
+1986,McLaren,96.0,4,2
+1986,Williams,141.0,9,1
+1958,Porsche,0.0,0,9
+1958,OSCA,0.0,0,9
+1958,Connaught,0.0,0,9
+1958,Kuzma,0.0,0,9
+1958,Lesovsky,0.0,0,9
+1958,Watson,0.0,0,9
+1958,Phillips,0.0,0,9
+1958,Dunn,0.0,0,9
+1958,Team Lotus,3.0,0,8
+1958,Kurtis Kraft,4.0,0,7
+1958,Maserati,9.0,0,6
+1958,Epperly,20.0,1,5
+1958,BRM,24.0,0,4
+1958,Cooper,38.0,2,3
+1958,Vanwall,68.0,6,2
+1958,Ferrari,93.0,2,1
+1980,Shadow,0.0,0,12
+1980,ATS,0.0,0,12
+1980,Osella,0.0,0,12
+1980,Ensign,0.0,0,12
+1980,Alfa Romeo,4.0,0,11
+1980,Ferrari,8.0,0,10
+1980,Fittipaldi,11.0,0,7
+1980,Arrows,11.0,0,7
+1980,McLaren,11.0,0,7
+1980,Tyrrell,12.0,0,6
+1980,Team Lotus,14.0,0,5
+1980,Renault,38.0,3,4
+1980,Brabham,55.0,3,3
+1980,Ligier,66.0,2,2
+1980,Williams,120.0,6,1
+1993,Tyrrell,0.0,0,12
+1993,Lola,0.0,0,12
+1993,Jordan,3.0,0,10
+1993,Larrousse,3.0,0,10
+1993,Footwork,4.0,0,9
+1993,Minardi,7.0,0,8
+1993,Team Lotus,12.0,0,6
+1993,Sauber,12.0,0,6
+1993,Ligier,23.0,0,5
+1993,Ferrari,28.0,0,4
+1993,Benetton,72.0,1,3
+1993,McLaren,84.0,5,2
+1993,Williams,168.0,10,1
+1965,Lotus-Ford,0.0,0,9
+1965,LDS-Climax,0.0,0,9
+1965,Brabham-Ford,0.0,0,9
+1965,Cooper-Ford,0.0,0,9
+1965,RE,0.0,0,9
+1965,Alfa Romeo,0.0,0,9
+1965,Cooper-Maserati,0.0,0,9
+1965,LDS-Alfa Romeo,0.0,0,9
+1965,Lotus-BRM,2.0,0,8
+1965,Brabham-BRM,5.0,0,7
+1965,Honda,13.0,1,6
+1965,Cooper-Climax,14.0,0,5
+1965,Ferrari,32.0,0,4
+1965,Brabham-Climax,39.0,0,3
+1965,Lotus-Climax,64.0,6,2
+1965,BRM,81.0,3,1
+1953,Simca,0.0,0,5
+1953,OSCA,0.0,0,5
+1953,HWM,0.0,0,5
+1953,AFM,0.0,0,5
+1953,Del Roy,0.0,0,5
+1953,Kuzma,0.0,0,5
+1953,Watson,0.0,0,5
+1953,Schroeder,0.0,0,5
+1953,Bromme,0.0,0,5
+1953,Stevens,0.0,0,5
+1953,Veritas,0.0,0,5
+1953,Lesovsky,0.0,0,5
+1953,Connaught,0.0,0,5
+1953,Cooper,0.0,0,5
+1953,EMW,0.0,0,5
+1953,BMW,0.0,0,5
+1953,Turner,0.0,0,5
+1953,Gordini,4.0,0,4
+1953,Kurtis Kraft,20.5,1,3
+1953,Maserati,62.0,1,2
+1953,Ferrari,121.5,7,1
+1995,Forti,0.0,0,11
+1995,Simtek,0.0,0,11
+1995,Pacific,0.0,0,11
+1995,Minardi,1.0,0,10
+1995,Tyrrell,5.0,0,8
+1995,Footwork,5.0,0,8
+1995,Sauber,18.0,0,7
+1995,Jordan,21.0,0,6
+1995,Ligier,24.0,0,5
+1995,McLaren,30.0,0,4
+1995,Ferrari,73.0,1,3
+1995,Williams,118.0,5,2
+1995,Benetton,147.0,11,1
+1956,Bugatti,0.0,0,9
+1956,Lesovsky,0.0,0,9
+1956,BRM,0.0,0,9
+1956,Kuzma,0.0,0,9
+1956,Emeryson,0.0,0,9
+1956,Stevens,0.0,0,9
+1956,Cooper,0.0,0,9
+1956,Gordini,2.0,0,8
+1956,Vanwall,3.0,0,7
+1956,Phillips,4.0,0,6
+1956,Watson,8.0,1,5
+1956,Connaught,9.0,0,4
+1956,Kurtis Kraft,12.0,0,3
+1956,Ferrari,66.5,5,2
+1956,Maserati,68.0,2,1
+1957,BRM,0.0,0,9
+1957,Porsche,0.0,0,9
+1957,Watson,0.0,0,9
+1957,Dunn,0.0,0,9
+1957,Lesovsky,0.0,0,9
+1957,Phillips,0.0,0,9
+1957,Cooper,2.0,0,8
+1957,Connaught,3.0,0,7
+1957,Kuzma,4.0,0,6
+1957,Kurtis Kraft,5.0,0,5
+1957,Epperly,15.0,1,4
+1957,Vanwall,32.0,3,3
+1957,Ferrari,48.0,0,2
+1957,Maserati,77.0,4,1
+1964,Porsche,0.0,0,9
+1964,Brabham-Ford,0.0,0,9
+1964,Derrington,0.0,0,9
+1964,Scirocco,0.0,0,9
+1964,Honda,0.0,0,9
+1964,Lotus-BRM,3.0,0,8
+1964,BRP,5.0,0,7
+1964,Brabham-BRM,7.0,0,6
+1964,Cooper-Climax,16.0,0,5
+1964,Brabham-Climax,36.0,2,4
+1964,Lotus-Climax,49.0,3,3
+1964,Ferrari,64.0,3,2
+1964,BRM,70.0,2,1
+1970,Bellasi,0.0,0,9
+1970,McLaren-Alfa Romeo,0.0,0,9
+1970,Tyrrell,0.0,0,9
+1970,De Tomaso,0.0,0,9
+1970,Surtees,3.0,0,8
+1970,Matra,24.0,0,7
+1970,BRM,25.0,1,6
+1970,Brabham,35.0,1,5
+1970,McLaren-Ford,36.0,0,4
+1970,March,55.0,1,3
+1970,Team Lotus,70.0,6,2
+1970,Ferrari,76.0,4,1
+2006,MF1,0.0,0,10
+2006,Spyker MF1,0.0,0,10
+2006,Super Aguri,0.0,0,10
+2006,Toro Rosso,1.0,0,9
+2006,Williams,11.0,0,8
+2006,Red Bull,16.0,0,7
+2006,Toyota,35.0,0,6
+2006,BMW Sauber,36.0,0,5
+2006,Honda,86.0,1,4
+2006,McLaren,110.0,0,3
+2006,Ferrari,201.0,9,2
+2006,Renault,206.0,8,1
+2012,HRT,0.0,0,10
+2012,Marussia,0.0,0,10
+2012,Caterham,0.0,0,10
+2012,Toro Rosso,26.0,0,9
+2012,Williams,76.0,1,8
+2012,Force India,109.0,0,7
+2012,Sauber,126.0,0,6
+2012,Mercedes,142.0,1,5
+2012,Lotus F1,303.0,1,4
+2012,McLaren,378.0,7,3
+2012,Ferrari,400.0,3,2
+2012,Red Bull,460.0,7,1
+2011,HRT,0.0,0,10
+2011,Lotus,0.0,0,10
+2011,Virgin,0.0,0,10
+2011,Williams,5.0,0,9
+2011,Toro Rosso,41.0,0,8
+2011,Sauber,44.0,0,7
+2011,Force India,69.0,0,6
+2011,Renault,73.0,0,5
+2011,Mercedes,165.0,0,4
+2011,Ferrari,375.0,1,3
+2011,McLaren,497.0,6,2
+2011,Red Bull,650.0,12,1
+1969,BRM-Ford,0.0,0,7
+1969,Cooper-Maserati,0.0,0,7
+1969,Brabham-Repco,0.0,0,7
+1969,Eagle-Climax,0.0,0,7
+1969,Brabham-Climax,0.0,0,7
+1969,Ferrari,7.0,0,5
+1969,BRM,7.0,0,5
+1969,McLaren-Ford,49.0,1,4
+1969,Lotus-Ford,59.0,2,3
+1969,Brabham-Ford,68.0,2,2
+1969,Matra-Ford,85.0,6,1
+2010,HRT,0.0,0,10
+2010,Lotus,0.0,0,10
+2010,Virgin,0.0,0,10
+2010,Toro Rosso,13.0,0,9
+2010,Sauber,44.0,0,8
+2010,Force India,68.0,0,7
+2010,Williams,69.0,0,6
+2010,Renault,163.0,0,5
+2010,Mercedes,214.0,0,4
+2010,Ferrari,396.0,5,3
+2010,McLaren,454.0,5,2
+2010,Red Bull,498.0,9,1
+1971,Bellasi,0.0,0,10
+1971,Lotus-Pratt &amp; Whitney,0.0,0,10
+1971,March-Alfa Romeo,0.0,0,10
+1971,Brabham,7.0,0,9
+1971,Surtees,9.0,0,8
+1971,Matra,10.0,0,7
+1971,McLaren,13.0,0,6
+1971,Lotus-Ford,25.0,0,5
+1971,March-Ford,37.0,0,4
+1971,BRM,42.0,2,3
+1971,Ferrari,44.0,2,2
+1971,Tyrrell,88.0,7,1
+1961,Ferguson,0.0,0,6
+1961,Gilby,0.0,0,6
+1961,MBM,0.0,0,6
+1961,De Tomaso-Osca,0.0,0,6
+1961,Cooper-Maserati,0.0,0,6
+1961,JBW,0.0,0,6
+1961,Emeryson,0.0,0,6
+1961,Lotus-Maserati,0.0,0,6
+1961,De Tomaso-Alfa Romeo,0.0,0,6
+1961,BRM,9.0,0,5
+1961,Cooper-Climax,24.0,0,3
+1961,Porsche,24.0,0,3
+1961,Lotus-Climax,44.0,3,2
+1961,Ferrari,99.0,5,1
+2016,Manor Marussia,1.0,0,11
+2016,Sauber,2.0,0,10
+2016,Renault,8.0,0,9
+2016,Haas F1 Team,29.0,0,8
+2016,Toro Rosso,63.0,0,7
+2016,McLaren,76.0,0,6
+2016,Williams,138.0,0,5
+2016,Force India,173.0,0,4
+2016,Ferrari,398.0,0,3
+2016,Red Bull,468.0,2,2
+2016,Mercedes,765.0,19,1
+1972,Politoys,0.0,0,10
+1972,Connew,0.0,0,10
+1972,Tecno,0.0,0,10
+1972,Brabham,7.0,0,9
+1972,Matra,12.0,0,8
+1972,BRM,14.0,1,7
+1972,March,15.0,0,6
+1972,Surtees,18.0,0,5
+1972,Ferrari,47.0,1,4
+1972,Tyrrell,60.0,4,3
+1972,Team Lotus,61.0,5,2
+1972,McLaren,66.0,1,1
+2021,Mercedes,60.0,1,1
+2021,Red Bull,53.0,1,2
+2021,McLaren,41.0,0,3
+2021,Ferrari,34.0,0,4
+2021,AlphaTauri,8.0,0,5
+2021,Aston Martin,5.0,0,6
+2021,Alpine F1 Team,3.0,0,7
+2021,Alfa Romeo,0.0,0,8
+2021,Williams,0.0,0,8
+2021,Haas F1 Team,0.0,0,8
+2013,Marussia,0.0,0,10
+2013,Caterham,0.0,0,10
+2013,Williams,5.0,0,9
+2013,Toro Rosso,33.0,0,8
+2013,Sauber,57.0,0,7
+2013,Force India,77.0,0,6
+2013,McLaren,122.0,0,5
+2013,Lotus F1,315.0,1,4
+2013,Ferrari,354.0,2,3
+2013,Mercedes,360.0,3,2
+2013,Red Bull,596.0,13,1
+2008,Super Aguri,0.0,0,10
+2008,Force India,0.0,0,10
+2008,Honda,14.0,0,9
+2008,Williams,26.0,0,8
+2008,Red Bull,29.0,0,7
+2008,Toro Rosso,39.0,1,6
+2008,Toyota,56.0,0,5
+2008,Renault,80.0,2,4
+2008,BMW Sauber,135.0,1,3
+2008,McLaren,151.0,6,2
+2008,Ferrari,172.0,8,1
+2019,Williams,1.0,0,10
+2019,Haas F1 Team,28.0,0,9
+2019,Alfa Romeo,57.0,0,8
+2019,Racing Point,73.0,0,7
+2019,Toro Rosso,85.0,0,6
+2019,Renault,91.0,0,5
+2019,McLaren,145.0,0,4
+2019,Red Bull,417.0,3,3
+2019,Ferrari,504.0,3,2
+2019,Mercedes,739.0,15,1
+2007,Spyker,1.0,0,11
+2007,Super Aguri,4.0,0,10
+2007,Honda,6.0,0,9
+2007,Toro Rosso,8.0,0,8
+2007,Toyota,13.0,0,7
+2007,Red Bull,24.0,0,6
+2007,Williams,33.0,0,5
+2007,Renault,51.0,0,4
+2007,BMW Sauber,101.0,0,3
+2007,Ferrari,204.0,9,2
+2007,McLaren,218.0,8,1
+2009,Toro Rosso,8.0,0,10
+2009,Force India,13.0,0,9
+2009,Renault,26.0,0,8
+2009,Williams,34.5,0,7
+2009,BMW Sauber,36.0,0,6
+2009,Toyota,59.5,0,5
+2009,Ferrari,70.0,1,4
+2009,McLaren,71.0,2,3
+2009,Red Bull,153.5,6,2
+2009,Brawn,172.0,8,1
+2002,Toyota,2.0,0,9
+2002,Minardi,2.0,0,9
+2002,Arrows,2.0,0,9
+2002,BAR,7.0,0,8
+2002,Jaguar,8.0,0,7
+2002,Jordan,9.0,0,6
+2002,Sauber,11.0,0,5
+2002,Renault,23.0,0,4
+2002,McLaren,65.0,1,3
+2002,Williams,92.0,1,2
+2002,Ferrari,221.0,15,1
+2018,Williams,7.0,0,10
+2018,Toro Rosso,33.0,0,9
+2018,Sauber,48.0,0,8
+2018,McLaren,62.0,0,7
+2018,Haas F1 Team,93.0,0,6
+2018,Force India,111.0,0,5
+2018,Renault,122.0,0,4
+2018,Red Bull,419.0,4,3
+2018,Ferrari,571.0,6,2
+2018,Mercedes,655.0,11,1
+1997,Lola,0.0,0,11
+1997,Minardi,0.0,0,11
+1997,Tyrrell,2.0,0,10
+1997,Stewart,6.0,0,9
+1997,Arrows,9.0,0,8
+1997,Sauber,16.0,0,7
+1997,Prost,21.0,0,6
+1997,Jordan,33.0,0,5
+1997,McLaren,63.0,3,4
+1997,Benetton,67.0,1,3
+1997,Ferrari,102.0,5,2
+1997,Williams,123.0,8,1
+2014,Sauber,0.0,0,10
+2014,Caterham,0.0,0,10
+2014,Marussia,2.0,0,9
+2014,Lotus F1,10.0,0,8
+2014,Toro Rosso,30.0,0,7
+2014,Force India,155.0,0,6
+2014,McLaren,181.0,0,5
+2014,Ferrari,216.0,0,4
+2014,Williams,320.0,0,3
+2014,Red Bull,405.0,3,2
+2014,Mercedes,701.0,16,1
+2020,Williams,0.0,0,10
+2020,Haas F1 Team,3.0,0,9
+2020,Alfa Romeo,8.0,0,8
+2020,AlphaTauri,107.0,1,7
+2020,Ferrari,131.0,0,6
+2020,Renault,181.0,0,5
+2020,McLaren,202.0,0,4
+2020,Racing Point,210.0,1,3
+2020,Red Bull,319.0,2,2
+2020,Mercedes,573.0,13,1
+2017,Sauber,5.0,0,10
+2017,McLaren,30.0,0,9
+2017,Haas F1 Team,47.0,0,8
+2017,Toro Rosso,53.0,0,7
+2017,Renault,57.0,0,6
+2017,Williams,83.0,0,5
+2017,Force India,187.0,0,4
+2017,Red Bull,368.0,3,3
+2017,Ferrari,522.0,5,2
+2017,Mercedes,668.0,12,1
+2000,Prost,0.0,0,10
+2000,Minardi,0.0,0,10
+2000,Jaguar,4.0,0,9
+2000,Sauber,6.0,0,8
+2000,Arrows,7.0,0,7
+2000,Jordan,17.0,0,6
+2000,BAR,20.0,0,4
+2000,Benetton,20.0,0,4
+2000,Williams,36.0,0,3
+2000,McLaren,162.0,7,2
+2000,Ferrari,170.0,10,1
+1973,Ensign,0.0,0,12
+1973,Tecno,1.0,0,11
+1973,Iso Marlboro,2.0,0,10
+1973,Surtees,7.0,0,9
+1973,Shadow,9.0,0,8
+1973,BRM,13.0,0,7
+1973,March,14.0,0,5
+1973,Ferrari,14.0,0,5
+1973,Brabham,22.0,0,4
+1973,McLaren,68.0,3,3
+1973,Team Lotus,107.0,7,2
+1973,Tyrrell,118.0,5,1
+2015,Manor Marussia,0.0,0,10
+2015,McLaren,27.0,0,9
+2015,Sauber,36.0,0,8
+2015,Toro Rosso,67.0,0,7
+2015,Lotus F1,78.0,0,6
+2015,Force India,136.0,0,5
+2015,Red Bull,187.0,0,4
+2015,Williams,257.0,0,3
+2015,Ferrari,428.0,3,2
+2015,Mercedes,703.0,16,1
+1999,BAR,0.0,0,11
+1999,Arrows,1.0,0,9
+1999,Minardi,1.0,0,9
+1999,Sauber,5.0,0,8
+1999,Prost,9.0,0,7
+1999,Benetton,16.0,0,6
+1999,Williams,35.0,0,5
+1999,Stewart,36.0,1,4
+1999,Jordan,61.0,2,3
+1999,McLaren,124.0,7,2
+1999,Ferrari,128.0,6,1
+1996,Forti,0.0,0,10
+1996,Minardi,0.0,0,10
+1996,Footwork,1.0,0,9
+1996,Tyrrell,5.0,0,8
+1996,Sauber,11.0,0,7
+1996,Ligier,15.0,1,6
+1996,Jordan,22.0,0,5
+1996,McLaren,49.0,0,4
+1996,Benetton,68.0,0,3
+1996,Ferrari,70.0,3,2
+1996,Williams,175.0,12,1
+1998,Minardi,0.0,0,10
+1998,Tyrrell,0.0,0,10
+1998,Prost,1.0,0,9
+1998,Stewart,5.0,0,8
+1998,Arrows,6.0,0,7
+1998,Sauber,10.0,0,6
+1998,Benetton,33.0,0,5
+1998,Jordan,34.0,1,4
+1998,Williams,38.0,0,3
+1998,Ferrari,133.0,6,2
+1998,McLaren,156.0,9,1
+2001,Minardi,0.0,0,11
+2001,Arrows,1.0,0,10
+2001,Prost,4.0,0,9
+2001,Jaguar,9.0,0,8
+2001,Benetton,10.0,0,7
+2001,BAR,17.0,0,6
+2001,Jordan,19.0,0,5
+2001,Sauber,21.0,0,4
+2001,Williams,80.0,4,3
+2001,McLaren,102.0,4,2
+2001,Ferrari,179.0,9,1
+2003,Minardi,0.0,0,10
+2003,Jordan,13.0,1,9
+2003,Toyota,16.0,0,8
+2003,Jaguar,18.0,0,7
+2003,Sauber,19.0,0,6
+2003,BAR,26.0,0,5
+2003,Renault,88.0,1,4
+2003,McLaren,142.0,2,3
+2003,Williams,144.0,4,2
+2003,Ferrari,158.0,8,1
+2005,Minardi,7.0,0,10
+2005,Jordan,12.0,0,9
+2005,Sauber,20.0,0,8
+2005,Red Bull,34.0,0,7
+2005,BAR,38.0,0,6
+2005,Williams,66.0,0,5
+2005,Toyota,88.0,0,4
+2005,Ferrari,100.0,1,3
+2005,McLaren,182.0,10,2
+2005,Renault,191.0,8,1
+2004,Minardi,1.0,0,10
+2004,Jordan,5.0,0,9
+2004,Toyota,9.0,0,8
+2004,Jaguar,10.0,0,7
+2004,Sauber,34.0,0,6
+2004,McLaren,69.0,1,5
+2004,Williams,88.0,1,4
+2004,Renault,105.0,1,3
+2004,BAR,119.0,0,2
+2004,Ferrari,262.0,15,1

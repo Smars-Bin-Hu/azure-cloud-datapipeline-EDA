@@ -1,6 +1,21 @@
 # 代码使用说明
 
-## Environment Setup for Azure Databricks
+## Content 
+
+- [Azure Databrick Enviroment Setup and Restore]()
+    - [Environment Setup for Azure Databricks]()
+    - [Databricks Notebook 脚本导入 Worksapce]()
+    - [Mount Data Lake Container to Databricks File System (DBFS)]()
+    - [Import data to Data Lake (RAW layer)]()
+    - [Data Modelling (Create databases and tables)]()
+    - [Data Restore in the ADLS]()
+    - [Delete Compute Resources]()
+
+- [Tableau BI]()
+
+## Azure Databrick Enviroment Setup and Restore
+
+### Environment Setup for Azure Databricks
 
 1. Azure上创建Storage Account（ADLS gen2 数据湖存储）
 
@@ -48,9 +63,9 @@ fs.azure.account.key.smarsproject0datalake.blob.core.windows.net {{secrets/smars
 - smars-project-scope 为我在workspaceURL#secrets/createScope里创建的Scope Name
 - smarsproject0datalake-access-key 为我的Key Vault里创建的secrets name
 
-## Databricks Notebook 脚本导入 Worksapce
+### Databricks Notebook 脚本导入 Worksapce
 
-## Mount Data Lake Container to Databricks File System (DBFS)
+### Mount Data Lake Container to Databricks File System (DBFS)
 
 click **"run all"** under the notebooks `src/utils/mount_adls_storage` web user interface.
 
@@ -68,50 +83,58 @@ Also, you can see the DBFS in our databricks workspace web UI.
 ![](./README/WechatIMG29.jpg)
 ![](./README/WechatIMG28.jpg)
 
-## Import data to Data Lake
+### Import data to Data Lake (RAW layer)
 
-### Dataset
+#### Dataset
 
 check out [dataset](../dataset/) of the project.
 
-### Import dataset to data lake container.
+#### Import dataset to data lake container.
 
 enter into `raw` container, and then click the `upload` and drop all dataset files to this container.
 
 ![](./README/WechatIMG27.jpg)
 
-## Data Modelling (Create databases and tables)
+### Data Modelling (Create databases and tables)
 
 By running scripts under `src/data_modeling` to create databases and tables schema in the DBFS.
 
 ![](./README/WechatIMG30.jpg)
 
-## Data Ingestion (layer `raw` to layer `processed`) & Data Transformation (layer `processed` to `presentation`) - incremental load workflow
+### Data Restore in the ADLS
 
-By running script `/src/data_ingestion/0.ingest_all_files` and `/src/data_transformation/0.transform_all_files`
+This step is going to run a batch job to finish data ingestion (layer `raw` to layer `processed`) & data transformation (layer `processed` to `presentation`) by incremental load workflow, and then restore the same data in the ADLS as mine.
 
-change the `p_file_date` every time in terms of different date:
-- `2021-03-21`
-- `2021-03-28`
-- `2021-04-18`
+By running script `/src/utils/restore_data_in_ADLS` to launch the one-click data ingestion and transfortion in terms of date.
 
-to realize the incremental load logic.
+Once done, check out the `processed` layer and `presentation` layer in the ADLS container.
 
-**please note that combine the operation of ingestion(1st) and transformation(2nd) each time for single same date.**
+![](./README/WechatIMG35.jpg)
+![](./README/WechatIMG36.jpg)
+![](./README/WechatIMG38.jpg)
+![](./README/WechatIMG39.jpg)
 
-![](./README/WechatIMG31.jpg)
+**if you want to refresh `processed` or `presentation` layer, you could run the script `src/data_modeling/processed_layer/drop_tables_processed` or `src/data_modeling/presentation_layer/drop_tables_transformation`, which is going to drop the databases `processed` or `transformation` and recreate it. (Empty all the metadata)**
 
-so, you are supposed to run 2*3 times at least to get the incremental loading process done.
+![](./README/WechatIMG41.jpg)
+![](./README/WechatIMG42.jpg)
 
-Once done, check out the `processed` layer and `presentation` in the ADLS.
-
-![](./README/WechatIMG32.jpg)
-![](./README/WechatIMG33.jpg)
-
-**if you want to refresh `processed` or `presentation` layer, you could run the script `src/utils/drop_tables_processed` or `src/utils/drop_tables_transformation`, which is going to drop the databases `processed` or `transformation` and recreate it. (Empty all the metadata)**
-
-## Delete Compute Resources
+### Delete Compute Resources
 
 After ingestion and transformation, basically core analytic data are loaded to `presentation` layer, now we could delete compute resources to save cost budget.
 
 ![](./README/WechatIMG33.jpg)
+
+## Tableau BI
+
+### Get Databrick Compute JDBC Configuration
+
+By checking out the configuration information under the compute cluster, and get the server hostname and the HTTP path.
+
+![](./README/WechatIMG43.jpg)
+
+and add the server hostname and HTTP path to the Tableau-Data Connection.
+ 
+![](./README/WechatIMG44.jpg)
+
+### 
