@@ -88,7 +88,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@and(\n    equals(activity('Get Processed circuits Detail').output.status, 'Succeeded'),\n    equals(activity('Get Processed constructors Detail').output.status, 'Succeeded')\n)\n",
+						"value": "@and(\n    activity('Get Processed circuits Detail').output.exists,\n    and(\n        activity('Get Processed constructors Detail').output.exists,\n        and(\n            activity('Get Processed drivers Detail').output.exists,\n            and(\n                activity('Get Processed lap_times Detail').output.exists,\n                and(\n                    activity('Get Processed pit_stops Detail').output.exists,\n                    and(\n                        activity('Get Processed qualifying Detail').output.exists,\n                        and(\n                            activity('Get Processed races Detail').output.exists,\n                            activity('Get Processed results Detail').output.exists\n                        )\n                    )\n                )\n            )\n        )\n    )\n)\n",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
