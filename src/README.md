@@ -9,7 +9,7 @@
     - [Import data to Data Lake (RAW layer)]()
     - [Data Modelling (Create databases and tables)]()
     - [Data Restore in the ADLS]()
-    - [Azure Data Factory Creation and Configuration (Scheduler)]()
+    - [Azure Data Factory Source Deployment]()
     - [Delete Compute Resources]()
 
 - [Tableau BI]()
@@ -119,6 +119,9 @@ Once done, check out the `processed` layer and `presentation` layer in the ADLS 
 
 ![](./README/WechatIMG41.jpg)
 ![](./README/WechatIMG42.jpg)
+
+### Azure Data Factory Source Deployment
+
 
 
 ### Delete Compute Resources

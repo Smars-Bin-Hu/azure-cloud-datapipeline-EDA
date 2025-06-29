@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaults_smars_project_key_vault_name": {
+            "value": null
+        },
+        "storageAccounts_smarsproject0datalake_name": {
+            "value": null
+        },
+        "workspaces_azure_cloud_datapipeline_EDA_project_ws_name": {
+            "value": null
+        }
+    }
+}
