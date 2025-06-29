@@ -9,6 +9,7 @@
     - [Import data to Data Lake (RAW layer)]()
     - [Data Modelling (Create databases and tables)]()
     - [Data Restore in the ADLS]()
+    - [Azure Data Factory Creation and Configuration (Scheduler)]()
     - [Delete Compute Resources]()
 
 - [Tableau BI]()
@@ -119,6 +120,7 @@ Once done, check out the `processed` layer and `presentation` layer in the ADLS 
 ![](./README/WechatIMG41.jpg)
 ![](./README/WechatIMG42.jpg)
 
+
 ### Delete Compute Resources
 
 After ingestion and transformation, basically core analytic data are loaded to `presentation` layer, now we could delete compute resources to save cost budget.
@@ -127,14 +129,3 @@ After ingestion and transformation, basically core analytic data are loaded to `
 
 ## Tableau BI
 
-### Get Databrick Compute JDBC Configuration
-
-By checking out the configuration information under the compute cluster, and get the server hostname and the HTTP path.
-
-![](./README/WechatIMG43.jpg)
-
-and add the server hostname and HTTP path to the Tableau-Data Connection.
- 
-![](./README/WechatIMG44.jpg)
-
-### 
