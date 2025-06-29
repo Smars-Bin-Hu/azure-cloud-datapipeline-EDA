@@ -9,7 +9,7 @@
 				"type": "PipelineReference"
 			},
 			"parameters": {
-				"p_window_end_date": "@trigger().outputs.windowEndTime"
+				"p_window_end_date": "adf @formatDateTime(trigger().outputs.windowEndTime,'yyyyMMdd')"
 			}
 		},
 		"type": "TumblingWindowTrigger",
