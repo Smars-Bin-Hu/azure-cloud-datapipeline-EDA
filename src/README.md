@@ -1,10 +1,10 @@
-# 代码使用说明
+# Source Code Instruction
 
 ## Content 
 
 - [Azure Databrick Enviroment Setup and Restore]()
     - [Environment Setup for Azure Databricks]()
-    - [Databricks Notebook 脚本导入 Worksapce]()
+    - [Load Databricks Notebook  to the Worksapce]()
     - [Mount Data Lake Container to Databricks File System (DBFS)]()
     - [Import data to Data Lake (RAW layer)]()
     - [Data Modelling (Create databases and tables)]()
@@ -18,53 +18,53 @@
 
 ### Environment Setup for Azure Databricks
 
-1. Azure上创建Storage Account（ADLS gen2 数据湖存储）
+1. Create Storage Account on Azure（ADLS gen2 data lake storage）
 
 create data storage containers: `raw`, `processed`, `presentation` under the data lake account
 ![](./README/WechatIMG25.jpg)
 
-2. Azure上创建Databrick Workspace + Compute Cluster （notebook + Spark计算）
+2. Create Databrick Workspace + Compute Cluster on Azure（notebook + Spark compute）and create Compute Cluster
 
-并创建Compute Cluster
 ![](./README/cluster-config.png)
 
-3. Azure上创建Key Vault（存储access key）
+3. Create Key Vault on Azure（for restoring access key）and create Secrets
 
-并创建Secrets
 ![](./README/WechatIMG21.jpg)
 
-4. Databrick workspace里创建SecretScope， `HomepageURL` + `#secrets/createScope` 如下
+4. Create SecretScope， `HomepageURL` + `#secrets/createScope` on Databrick workspace as below
 
-通过下面方法进入Scope Create 页面
+**use below method to enter Scope Create page**
 
-例如我的homepage URL为
+e.g. my homepage URL is 
 ```bash
 https://adb-3262920291712130.10.azuredatabricks.net/?o=3262920291712130
 ```
-那么就加上`#secrets/createScope` 变成下面的URL
+then append `#secrets/createScope` and get the URL as below
 ```bash
 https://adb-3262920291712130.10.azuredatabricks.net/?o=3262920291712130#secrets/createScope
 ```
 
-然后输入
+Input
 ![](./README/WechatIMG19.jpg)
 
-获取Vault URI 和 Resource ID：
+get Vault URI and Resource ID：
 ![](./README/WechatIMG20.jpg)
 
-5. Databricks Cluster 添加 Secrets Spark Configs
+5. Databricks Cluster add Secrets Spark Configs
 
 ![](./README/WechatIMG23.jpg)
-Spark Config 加入下面这个
+In the Spark Config add below:
 ```bash
 fs.azure.account.key.smarsproject0datalake.blob.core.windows.net {{secrets/smars-project-scope/smarsproject0datalake-access-key}}
 ```
-注意：
-- smarsproject0datalake 为我的Storage Account Name
-- smars-project-scope 为我在workspaceURL#secrets/createScope里创建的Scope Name
-- smarsproject0datalake-access-key 为我的Key Vault里创建的secrets name
+Note：
+- `smarsproject0datalake` is my Storage Account Name.
+- `smars-project-scope` is the Scope Name created in the `{workspaceURL}#secrets/createScope`.
+- `smarsproject0datalake-access-key` is the secrets name created in my Azure Key Vault.
 
-### Databricks Notebook 脚本导入 Worksapce
+### Load Databricks Notebook  to the Worksapce
+
+**use `/dbc/azure-cloud-datapipeline-EDA.dbc` file to restore the source in the workspace.**
 
 ### Mount Data Lake Container to Databricks File System (DBFS)
 
