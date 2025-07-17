@@ -23,7 +23,7 @@
    <img src="https://img.shields.io/badge/unity_catelog-f2f2e8?style=for-the-badge&color=f2f2e8"/>
    <img src="https://img.shields.io/badge/databricks-252523?style=for-the-badge&logo=databricks&color=252523"/>
    <img src="https://img.shields.io/badge/delta_lake-red?style=for-the-badge&color=red"/>
-   <img src="https://img.shields.io/badge/power_bi-FFCC01?style=for-the-badge&logoColor=white"/>
+   <img src="https://img.shields.io/badge/tableau-eceeea?style=for-the-badge&logo=tableau&logoColor=blue"/>
    <img src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
    <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white"/>
 </p>
@@ -84,7 +84,7 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 
 This project sets up a high-availability big data platform, including the following components:
 
-![Azure Cloud](https://img.shields.io/badge/Azure_cloud-66CCFF?style=for-the-badge) ![Azure Data Factory](https://img.shields.io/badge/azure_data_factory-017CEE?style=for-the-badge&logoColor=white) ![Azure Data Factory](https://img.shields.io/badge/ADLS_gen2-017CEE?style=for-the-badge&logoColor=white)  ![Unity Catelog](https://img.shields.io/badge/unity_catelog-f2f2e8?style=for-the-badge&color=f2f2e8) ![Databricks](https://img.shields.io/badge/databricks-252523?style=for-the-badge&logo=databricks&color=252523)  ![Delta Lake](https://img.shields.io/badge/delta_lake-red?style=for-the-badge&color=red)  ![Power BI](https://img.shields.io/badge/power_bi-FFCC01?style=for-the-badge&logoColor=white) ![Python](https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue) ![Spark](https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white)
+![Azure Cloud](https://img.shields.io/badge/Azure_cloud-66CCFF?style=for-the-badge) ![Azure Data Factory](https://img.shields.io/badge/azure_data_factory-017CEE?style=for-the-badge&logoColor=white) ![Azure Data Factory](https://img.shields.io/badge/ADLS_gen2-017CEE?style=for-the-badge&logoColor=white)  ![Unity Catelog](https://img.shields.io/badge/unity_catelog-f2f2e8?style=for-the-badge&color=f2f2e8) ![Databricks](https://img.shields.io/badge/databricks-252523?style=for-the-badge&logo=databricks&color=252523)  ![Delta Lake](https://img.shields.io/badge/delta_lake-red?style=for-the-badge&color=red)  ![Tableau](https://img.shields.io/badge/tableau-eceeea?style=for-the-badge&logo=tableau&logoColor=blue)  ![Python](https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue) ![Spark](https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white)
 
 | Components/Services             | Features                       | Version |
 |------------------------|--------------------------------|---------|
