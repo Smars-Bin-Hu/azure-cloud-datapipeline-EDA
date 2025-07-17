@@ -4,7 +4,7 @@
 
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
-## Project Directory
+## Introduction
 <p align="center">
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/src/README/quick-start.md">
       <img src="https://img.shields.io/badge/project-🚀quick_start-blue?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
@@ -29,7 +29,13 @@
    <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white"/>
 </p>
 
-Introduction of this project here.
+This project presents an end-to-end data pipeline and analytics workflow centered around Formula 1 racing data, with a strong emphasis on exploratory data analysis (EDA) and visualization. It is structured into two core components: **cloud-native data engineering and analytical data visualization.**
+
+On the **data engineering** side, we leverage Azure Cloud services to build a scalable and automated data pipeline following the **medallion architecture (bronze, silver, gold layers)**. Raw data is ingested and stored in **Azure Data Lake Storage Gen2**, processed and transformed using **Azure Databricks** with **PySpark** and **SparkSQL**, and managed through **Delta Lake** to ensure ACID transactions and schema enforcement. We incorporate **Unity Catalog** for data governance and access control, while **Azure Data Factory** orchestrates the workflow to achieve full automation. The architecture demonstrates cloud-native best practices such as decoupled storage and compute, batch-stream unification, and automated job triggering—effectively realizing a modern **Lakehouse** design.
+
+On the **data analysis and visualization** front, we utilize both **Tableau** and **Python** for different analytical tasks. Tableau connects directly to the Databricks-backed gold layer, enabling real-time, **interactive BI dashboards** that cover historical driver and team rankings, national-level aggregations, and top driver trends over time. For deeper statistical insights, Python’s **Matplotlib** and **Seaborn** are used to explore multidimensional relationships, such as starting grid vs. final position, fastest lap vs. points, and stability of driver performance across seasons.
+
+By integrating enterprise-grade data infrastructure with intuitive visual storytelling, this project not only showcases advanced data engineering capabilities but also delivers valuable insights into the world of Formula 1 through rich, interactive visualizations.
 
 | ✅ Core Feature | 🔥 Core Highlights | 📦 Deliverables |
 |-----------|------------------|---------------|
