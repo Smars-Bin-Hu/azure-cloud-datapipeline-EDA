@@ -28,8 +28,6 @@
    <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white"/>
 </p>
 
-## Introduction
-
 This project presents an end-to-end data pipeline and analytics workflow centered around Formula 1 racing data, with a strong emphasis on exploratory data analysis (EDA) and visualization. It is structured into two core components: **cloud-native data engineering and analytical data visualization.**
 
 On the **data engineering** side, we leverage Azure Cloud services to build a scalable and automated data pipeline following the **medallion architecture (bronze, silver, gold layers)**. Raw data is ingested and stored in **Azure Data Lake Storage Gen2**, processed and transformed using **Azure Databricks** with **PySpark** and **SparkSQL**, and managed through **Delta Lake** to ensure ACID transactions and schema enforcement. We incorporate **Unity Catalog** for data governance and access control, while **Azure Data Factory** orchestrates the workflow to achieve full automation. The architecture demonstrates cloud-native best practices such as decoupled storage and compute, batch-stream unification, and automated job triggering—effectively realizing a modern **Lakehouse** design.
