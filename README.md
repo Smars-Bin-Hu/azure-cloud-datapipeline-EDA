@@ -4,7 +4,6 @@
 
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
-## Introduction
 <p align="center">
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/src/README/quick-start.md">
       <img src="https://img.shields.io/badge/project-🚀quick_start-blue?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
@@ -28,6 +27,8 @@
    <img src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
    <img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=for-the-badge&logo=apachespark&logoSize=auto&color=white"/>
 </p>
+
+## Introduction
 
 This project presents an end-to-end data pipeline and analytics workflow centered around Formula 1 racing data, with a strong emphasis on exploratory data analysis (EDA) and visualization. It is structured into two core components: **cloud-native data engineering and analytical data visualization.**
 
