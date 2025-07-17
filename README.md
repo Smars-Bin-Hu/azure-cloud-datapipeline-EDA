@@ -37,10 +37,12 @@ On the **data analysis and visualization** front, we utilize both **Tableau** an
 By integrating enterprise-grade data infrastructure with intuitive visual storytelling, this project not only showcases advanced data engineering capabilities but also delivers valuable insights into the world of Formula 1 through rich, interactive visualizations.
 
 | ✅ Core Feature | 🔥 Core Highlights | 📦 Deliverables |
-|-----------|------------------|---------------|
-| **1. [deliverables I](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
-| **2. [deliverables II](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
-| **3. [deliverables III](link)** | - 1 <br> - 2 <br> - 3 | - 1 <br> - 2 <br> - 3 |
+|----------------|--------------------|-----------------|
+| **1. [Azure Data Pipeline Setup](#)** | - Production-grade pipeline using Azure services <br> - Step-by-step deployment guide with open-sourced code <br> - One-click deployment via Azure DevOps `.json` templates | - Azure DevOps `.json` templates: `/devops/` folder: pipeline configs <br> - `services_architecture.png` azure services architecture overview <br> |
+| **2. [Databricks ETL Workflow](#)** | - End-to-end ETL with PySpark & SparkSQL <br> - Medallion architecture modeling (Bronze → Silver → Gold) <br> - Open-source Databricks Notebooks and scripts | - `/src/` and `/dbc/azure-cloud-datapipeline-EDA.dbc` files for direct import <br> - `medallion_diagram.png` architecture overview - Modular ETL: data_ingestion, data_transformation, data_modeling, data_analysis, config, utils |
+| **3. [Data Orchestration via ADF](#)** | - Workflow automation with Azure Data Factory <br> - Scheduled, triggered pipelines <br> - Full `.json` export for reproducibility | - `/ADF/` folder with pipeline `.json` files <br> - Import-ready ADF workflow <br> - Setup & execution flow in `/docs/dev/ADF-development-steps.md` |
+| **4. [BI Dashboard & EDA](#)** | - Tableau Public dashboard for interactive exploration <br> - Deep EDA with Python (Matplotlib, Seaborn) <br> - Accompanying analysis report in PDF format | - Tableau Public link & screenshots <br> - `/visualization/via_python/ADF-development-steps.md` for visual/statistical analysis <br> - `/visualization/f1_analysis_report.pdf` with insights |
+| **5. [Documentation & Knowledge Sharing](#)** | - Azure-native data engineering tutorials <br> - Concepts explained: Lakehouse, Delta Lake, Unity Catalog, Medallion Layers <br> - Best practices & reusable code patterns | - `/docs/dev/*.md`: Step-by-step deployment guides <br> - `/docs/wiki/*.md`: Big data & Azure concepts explanations |
 
 ## Project Structure
 
@@ -48,6 +50,10 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 /bigdata-datawarehouse-project
 ├── 📄 README.md                           # Project overview and documentation links
 ├── 📄 LICENSE                             # MIT License file
+├── 📁 ADF/                                # Azure Data Factory Import-Ready Workflow .json Templates
+├── 📁 devops/                             # Azure All Services Deployment .json Templates
+│   ├── 📁 ADF_src/                        # Azure Data Factory Import-Ready Templates
+│   ├── 📁 azure_deployment/               # Azure Cloud Services&Resources Import-Ready Templates
 ├── 📁 src/                                # Source code directory
 │   ├── 📁 README.md                       # source code instruction overview
 │   ├── 📁 data_ingestion/                 # Data ingestion layer
@@ -67,6 +73,11 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 │   │   ├── 📁 2021-03-28/                 # March 28, 2021 dataset
 │   │   └── 📁 2021-04-18/                 # April 18, 2021 dataset
 │   └── 📁 demo_code/                      # Demo and learning materials
+├── 📁 visualization/                      # Data Visualization
+│   ├── 📁 via_python/                     # jupyter notebooks for visualization via python
+│   ├── 📁 via_tableau/                    # tableau dashboard .twb file
+│   ├── 📁 f1_presentation(2021-04-18)/    # data source for BI
+│   ├── 📁 generated_images/               # generated images via python
 ├── 📁 dataset/                            # Sample datasets (for incremental load)
 └── 📁 docs/                               # Documentation directory
     ├── 📄 README.md                       # Documentation overview
