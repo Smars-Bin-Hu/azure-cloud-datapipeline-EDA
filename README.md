@@ -87,9 +87,59 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 
 ## Core Deliverables
 
-### 1. deliverables I
-### 2. deliverables II
-### 3. deliverables III
+### 1. Azure Lakehouse Pipeline Setup
+
+![Tech Architecture](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/azure-cloud-datapipeline-EDA/tech-architecture.drawio.svg)
+<p align="center"><em>Fig. Tech Architecture </em></p>
+
+### 2. Databricks ETL Workflow
+### 3. Data Orchestration via ADF
+### 4. BI Dashboard & EDA
+
+#### A) Interactive Tableau BI Dashboard
+
+👉 Click the link right to access the [Public Tableau BI Dashboard](https://public.tableau.com/app/profile/smars.hu/viz/eda_visualization_on_formula1_racing/Dashboard1?publish=yes)
+
+<img width="2791" height="1346" alt="Screenshot 2025-07-20 at 20 10 03" src="https://github.com/user-attachments/assets/dcd67a88-5490-430f-8d31-e5290b61dfc5" />
+<p align="center"><em>Fig. Tableau BI Dashboard I </em></p>
+
+<img width="2811" height="1271" alt="Screenshot 2025-07-20 at 20 10 25" src="https://github.com/user-attachments/assets/e94193e3-1c90-42c9-832d-3cc0ec5144f0" />
+<p align="center"><em>Fig. Tableau BI Dashboard II </em></p>
+
+<img width="2552" height="1458" alt="Screenshot 2025-07-20 at 21 44 12" src="https://github.com/user-attachments/assets/a9195328-c792-49b9-9895-3f58a1d8eab2" />
+<p align="center"><em>Fig. Tableau BI Dashboard III </em></p>
+
+<img width="2605" height="535" alt="Screenshot 2025-07-20 at 21 44 19" src="https://github.com/user-attachments/assets/2c122eb1-ddfe-4c5a-b960-77d3f8eb3f6d" />
+<p align="center"><em>Fig. Tableau BI Dashboard IV </em></p>
+
+#### B) Python Visualization using `Matplotlib` and `Seaborn`
+
+👉 Click the link right to access the [Python Notebook](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/92107a59-54f1-4496-b106-367329d42ca3"
+       alt="Screenshot 2025-07-20 at 21 57 40"
+       width="70%"><br>
+  <em>Fig. Python Visualization I</em>
+
+  <img src="https://github.com/user-attachments/assets/e55b9582-354a-4d95-ad03-a53b7b6b5721"
+     alt="Screenshot 2025-07-20 at 21 57 49"
+     width="70%"><br>
+  <em>Fig. Python Visualization II</em>
+
+  <img src="https://github.com/user-attachments/assets/733e5bd1-0926-4acd-bded-3018ff733af1"
+     alt="Screenshot 2025-07-20 at 21 59 01"
+     width="70%"><br>
+   <em>Fig. Python Visualization III</em>
+</div>
+
+#### C) Exploration Data Analysis (EDA) Paper
+
+👉 Click and access [PDF]()
+
+### 5. Documentation & Knowledge Sharing
+
+🔗 GO TO [Wiki](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/wiki)
 
 ## Tech Stack
 
