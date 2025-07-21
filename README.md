@@ -135,11 +135,15 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 
 #### C) Exploration Data Analysis (EDA) Paper
 
-👉 Click and access [PDF]()
+<div align="center">
+  <img width="70%" alt="Screenshot 2025-07-20 at 22 28 14" src="https://github.com/user-attachments/assets/851e5132-22e6-47da-933d-47694ab93473" />
+</div>
+
+👉 Click and access [PDF](https://github.com/user-attachments/assets/851e5132-22e6-47da-933d-47694ab93473)
 
 ### 5. Documentation & Knowledge Sharing
 
-🔗 GO TO [Wiki](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/wiki)
+🔗 GO TO [Wiki](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/wiki) Tab
 
 ## Tech Stack
 
