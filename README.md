@@ -5,7 +5,7 @@
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
 <p align="center">
-  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#source-code-instruction-for-use-src">
+  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/src/README.md">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
   <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/wiki/Project-Documentation">
