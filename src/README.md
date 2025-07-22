@@ -3,16 +3,21 @@
 ## Content 
 
 - [Azure Databrick Enviroment Setup and Restore]()
-    - [Environment Setup for Azure Databricks]()
-    - [Load Databricks Notebook  to the Worksapce]()
-    - [Mount Data Lake Container to Databricks File System (DBFS)]()
-    - [Import data to Data Lake (RAW layer)]()
-    - [Data Modelling (Create databases and tables)]()
-    - [Data Restore in the ADLS]()
-    - [Azure Data Factory Source Deployment]()
-    - [Delete Compute Resources]()
 
-- [Tableau BI]()
+    - [Environment Setup for Azure Databricks](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#environment-setup-for-azure-databricks)
+    - [Load Databricks Notebook to the Worksapce](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#load-databricks-notebook--to-the-worksapce)
+    - [Mount Data Lake Container to Databricks File System (DBFS)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#mount-data-lake-container-to-databricks-file-system-dbfs)
+    - [Import data to Data Lake (RAW layer)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#import-data-to-data-lake-raw-layer)
+    - [Data Modelling (Create databases and tables)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#data-modelling-create-databases-and-tables)
+    - [Data Restore in the ADLS](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#data-restore-in-the-adls)
+    - [Azure Data Factory Source Deployment (using ARM Template)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#azure-data-factory-source-deployment-using-arm-template)
+    - [Delete Compute Resources](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#delete-compute-resources)
+
+- [Data Visualization & EDA]()
+
+    - [Data Visualization via Python](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
+    - [Data Visualization via Tableau BI](https://public.tableau.com/app/profile/smars.hu/viz/eda_visualization_on_formula1_racing/Dashboard1?publish=yes)
+    - [EDA Paper](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/Final%20Project%20Paper.pdf)
 
 ## Azure Databrick Enviroment Setup and Restore
 
@@ -144,3 +149,8 @@ After ingestion and transformation, basically core analytic data are loaded to `
 
 ## Tableau BI
 
+### [Data Visualization via Python](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
+
+### [Data Visualization via Tableau BI](https://public.tableau.com/app/profile/smars.hu/viz/eda_visualization_on_formula1_racing/Dashboard1?publish=yes)
+
+### [EDA Paper](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/Final%20Project%20Paper.pdf)
