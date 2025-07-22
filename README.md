@@ -172,7 +172,7 @@ This project sets up a high-availability big data platform, including the follow
 | Apache Spark           | Distributed Computing          | 3.3.0   |
 | Azure Databricks            | Cluster Compute Workspace               | -   |
 | Delta Lake            | Lakehouse Architecture               | -   |
-| Unity Catelog            |                | -   |
+| Unity Catelog            | Data Governance, Access Control, Versioning, data lineage    | -   |
 | Power BI            | Data Visualization               | -   |
 
 
