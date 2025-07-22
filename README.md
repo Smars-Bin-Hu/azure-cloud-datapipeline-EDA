@@ -5,10 +5,10 @@
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
 <p align="center">
-  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src/README.md">
+  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#source-code-instruction-for-use-src">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
-  <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/wiki">
+  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/wiki/Project-Documentation">
       <img src="https://img.shields.io/badge/project-all%20documents-red?style=for-the-badge&logo=github" image"/>
    </a>
 </p>
@@ -35,11 +35,11 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 
 | ✅ Core Feature | 🔥 Core Highlights | 📦 Deliverables |
 |----------------|--------------------|-----------------|
-| **1. [Azure Lakehouse Pipeline Setup](#)** | - Production-grade lakehouse pipeline using Azure services <br> - Step-by-step deployment guide with open-sourced code <br> - One-click deployment via Azure DevOps `.json` templates | - Azure DevOps `.json` templates: `/devops/` folder: pipeline configs <br> - `services_architecture.png` azure services architecture overview <br> |
-| **2. [Databricks ETL Workflow](#)** | - End-to-end ETL with PySpark & SparkSQL <br> - Medallion architecture modeling (Bronze → Silver → Gold) <br> - Open-source Databricks Notebooks and scripts | - `/src/` and `/dbc/azure-cloud-datapipeline-EDA.dbc` files for direct import <br> - `medallion_diagram.png` architecture overview - Modular ETL: data_ingestion, data_transformation, data_modeling, data_analysis, config, utils |
-| **3. [Data Orchestration via ADF](#)** | - Workflow automation with Azure Data Factory <br> - Scheduled, triggered pipelines <br> - Full `.json` export for reproducibility | - `/ADF/` folder with pipeline `.json` files <br> - Import-ready ADF workflow <br> - Setup & execution flow in `/docs/dev/ADF-development-steps.md` |
-| **4. [BI Dashboard & EDA](#)** | - Tableau Public dashboard for interactive exploration <br> - Deep EDA with Python (Matplotlib, Seaborn) <br> - Accompanying analysis report in PDF format | - Tableau Public link & screenshots <br> - `/visualization/via_python/ADF-development-steps.md` for visual/statistical analysis <br> - `/visualization/f1_analysis_report.pdf` with insights |
-| **5. [Documentation & Knowledge Sharing](#)** | - Azure-native data engineering tutorials <br> - Concepts explained: Lakehouse, Delta Lake, Unity Catalog, Medallion Layers <br> - Best practices & reusable code patterns | - `/docs/dev/*.md`: Step-by-step deployment guides <br> - `/docs/wiki/*.md`: Big data & Azure concepts explanations |
+| **1. [Azure Lakehouse Pipeline Setup](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#1-azure-lakehouse-pipeline-setup)** | - Production-grade lakehouse pipeline using Azure services <br> - Step-by-step deployment guide with open-sourced code <br> - One-click deployment via Azure DevOps `.json` templates | - Azure DevOps `.json` templates: `/devops/` folder: pipeline configs <br> - `services_architecture.png` azure services architecture overview <br> |
+| **2. [Databricks ETL Workflow](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#2-databricks-etl-workflow)** | - End-to-end ETL with PySpark & SparkSQL <br> - Medallion architecture modeling (Bronze → Silver → Gold) <br> - Open-source Databricks Notebooks and scripts | - `/src/` and `/dbc/azure-cloud-datapipeline-EDA.dbc` files for direct import <br> - `medallion_diagram.png` architecture overview - Modular ETL: data_ingestion, data_transformation, data_modeling, data_analysis, config, utils |
+| **3. [Data Orchestration via ADF](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#3-data-orchestration-via-adf)** | - Workflow automation with Azure Data Factory <br> - Scheduled, triggered pipelines <br> - Full `.json` export for reproducibility | - `/ADF/` folder with pipeline `.json` files <br> - Import-ready ADF workflow <br> - Setup & execution flow in `/docs/dev/ADF-development-steps.md` |
+| **4. [BI Dashboard & EDA](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#4-bi-dashboard--eda)** | - Tableau Public dashboard for interactive exploration <br> - Deep EDA with Python (Matplotlib, Seaborn) <br> - Accompanying analysis report in PDF format | - Tableau Public link & screenshots <br> - `/visualization/via_python/ADF-development-steps.md` for visual/statistical analysis <br> - `/visualization/f1_analysis_report.pdf` with insights |
+| **5. [Documentation & Knowledge Sharing](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA?tab=readme-ov-file#5-documentation--knowledge-sharing)** | - Azure-native data engineering tutorials <br> - Concepts explained: Lakehouse, Delta Lake, Unity Catalog, Medallion Layers <br> - Best practices & reusable code patterns | - `/docs/dev/*.md`: Step-by-step deployment guides <br> - `/docs/wiki/*.md`: Big data & Azure concepts explanations |
 
 ## Project Structure
 
@@ -148,7 +148,7 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 #### C) Exploration Data Analysis (EDA) Paper
 
 <div align="center">
-  <img width="70%" alt="Screenshot 2025-07-20 at 22 28 14" src="https://github.com/user-attachments/assets/851e5132-22e6-47da-933d-47694ab93473" />
+  <img width="70%" alt="Screenshot 2025-07-20 at 22 28 14" src="https://github.com/user-attachments/assets/c4cb8b15-839e-427c-94c7-6ec5610394b3" />
 </div>
 
 👉 Click and access [PDF](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/Final%20Project%20Paper.pdf)
