@@ -13,7 +13,7 @@
     - [Azure Data Factory Source Deployment (using ARM Template)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#azure-data-factory-source-deployment-using-arm-template)
     - [Delete Compute Resources](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#delete-compute-resources)
 
-- [Data Visualization & EDA]()
+- [Data Visualization & EDA](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/edit/main/src/README.md#data-visualization--eda)
 
     - [Data Visualization via Python](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
     - [Data Visualization via Tableau BI](https://public.tableau.com/app/profile/smars.hu/viz/eda_visualization_on_formula1_racing/Dashboard1?publish=yes)
@@ -147,7 +147,7 @@ After ingestion and transformation, basically core analytic data are loaded to `
 
 ![](./README/WechatIMG33.jpg)
 
-## Tableau BI
+## Data Visualization & EDA
 
 ### [Data Visualization via Python](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
 
