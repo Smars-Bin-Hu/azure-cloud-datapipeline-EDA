@@ -54,6 +54,7 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 ├── 📁 devops/                             # Azure All Services Deployment .json Templates
 │   ├── 📁 ADF_src/                        # Azure Data Factory Import-Ready Templates
 │   ├── 📁 azure_deployment/               # Azure Cloud Services&Resources Import-Ready Templates
+├── 📁 dbc/                                # databrick notebook archive file
 ├── 📁 src/                                # Source code directory
 │   ├── 📁 README.md                       # source code instruction overview
 │   ├── 📁 data_ingestion/                 # Data ingestion layer
