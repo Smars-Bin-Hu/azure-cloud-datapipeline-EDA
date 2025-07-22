@@ -5,10 +5,7 @@
 # Cloud Native Data Pipeline on Azure Databricks for Exploratory Data Analysis
 
 <p align="center">
-  <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/src/README/quick-start.md">
-      <img src="https://img.shields.io/badge/project-🚀quick_start-blue?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
-  </a>
-  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/src">
+  <a href="https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src/README.md">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/wiki">
@@ -93,8 +90,22 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 ![Tech Architecture](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/azure-cloud-datapipeline-EDA/tech-architecture.drawio.svg)
 <p align="center"><em>Fig. Tech Architecture </em></p>
 
+[🔨 Code - Azure Exported Templates](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/devops)
+
 ### 2. Databricks ETL Workflow
+
+[🔨 Code - Source Code](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src)
+
 ### 3. Data Orchestration via ADF
+<div align="center">
+  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/ba618dc3-22e5-475a-a506-ee96a2254b3c" />
+  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/e4af80c5-2103-43ce-81a2-07016ec2f034" />
+</div>
+
+[🔨 Code - ADF Exported Templates](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/ADF)
+
+[🔗 Doc - ADF Pipeline Development](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/docs/doc/dev/ADF-development-steps.md)
+
 ### 4. BI Dashboard & EDA
 
 #### A) Interactive Tableau BI Dashboard
@@ -140,7 +151,7 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
   <img width="70%" alt="Screenshot 2025-07-20 at 22 28 14" src="https://github.com/user-attachments/assets/851e5132-22e6-47da-933d-47694ab93473" />
 </div>
 
-👉 Click and access [PDF](https://github.com/user-attachments/assets/851e5132-22e6-47da-933d-47694ab93473)
+👉 Click and access [PDF](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/Final%20Project%20Paper.pdf)
 
 ### 5. Documentation & Knowledge Sharing
 
@@ -167,6 +178,23 @@ This project sets up a high-availability big data platform, including the follow
 
 
 ## [Source Code Instruction for Use](./src/README.md) `/src`
+
+### [🚀 Azure Databrick Enviroment Setup and Restore](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#azure-databrick-enviroment-setup-and-restore)
+
+#### [Environment Setup for Azure Databricks](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#environment-setup-for-azure-databricks)
+#### [Load Databricks Notebook to the Worksapce](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#load-databricks-notebook--to-the-worksapce)
+#### [Mount Data Lake Container to Databricks File System (DBFS)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#mount-data-lake-container-to-databricks-file-system-dbfs)
+#### [Import data to Data Lake (RAW layer)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#import-data-to-data-lake-raw-layer)
+#### [Data Modelling (Create databases and tables)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#data-modelling-create-databases-and-tables)
+#### [Data Restore in the ADLS](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#data-restore-in-the-adls)
+#### [Azure Data Factory Source Deployment (using ARM Template)](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#azure-data-factory-source-deployment-using-arm-template)
+#### [Delete Compute Resources](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src#delete-compute-resources)
+
+### [🚀 Data Visualization & EDA](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/visualization)
+
+#### [Data Visualization via Python](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/via_python/f1_presentation_analysis.ipynb)
+#### [Data Visualization via Tableau BI](https://public.tableau.com/app/profile/smars.hu/viz/eda_visualization_on_formula1_racing/Dashboard1?publish=yes)
+#### [EDA Paper](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/blob/main/visualization/Final%20Project%20Paper.pdf)
 
 ## Project Documents `/docs`
 
@@ -196,6 +224,12 @@ Data Lakehouse Architecture
 - [3 Layer Model](./docs/doc/wiki/lakehouse-3-layers-model.md)
 - [Lakehouse architecture](./docs/doc/wiki/solution-architecture.md)
 - [Delta Lake Transaction Log](./docs/doc/wiki/delta-lake-transcation-log.md)
+
+#### 2. Dev
+
+Azure Data Factory
+
+- [ADF Development Steps](./docs/doc/dev/ADF-development-steps.md)
 
 ## License
 
