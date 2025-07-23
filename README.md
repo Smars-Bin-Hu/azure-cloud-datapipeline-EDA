@@ -100,10 +100,6 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 [🔨 Code - Source Code](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src)
 
 ### 3. Data Orchestration via ADF
-<div align="center">
-  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/ba618dc3-22e5-475a-a506-ee96a2254b3c" />
-  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/e4af80c5-2103-43ce-81a2-07016ec2f034" />
-</div>
 
 [🔨 Code - ADF Exported Templates](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/ADF)
 
