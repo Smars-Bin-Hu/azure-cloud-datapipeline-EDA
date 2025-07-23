@@ -94,6 +94,9 @@ By integrating enterprise-grade data infrastructure with intuitive visual storyt
 
 ### 2. Databricks ETL Workflow
 
+![Medallation ETL Workflow Architecture](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/azure-cloud-datapipeline-EDA/medallation-etl-workflow.drawio.svg)
+<p align="center"><em>Fig. Tech Architecture </em></p>
+
 [🔨 Code - Source Code](https://github.com/Smars-Bin-Hu/azure-cloud-datapipeline-EDA/tree/main/src)
 
 ### 3. Data Orchestration via ADF
